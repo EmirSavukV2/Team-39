@@ -41,14 +41,9 @@ Team 39
 
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 400 puanlık backlog bulunmaktadır. 4 sprint'e bölündüğünde ilk sprint'in en azından 50 ile başlaması gerektiğine karar verildi.
 
-- **Daily Scrum**: Daily Scrum toplantıları ilk hafta  discord üzerinden sesli toplantılar şeklinde düzenlenmiştir. Daha sonra whatsapp ve discord chat üzerinden toplantılara devam edilmiştir. [Sprint 1 Daily Scrum Chats](https://github.com/EmirSavukV2/Team-39/blob/main/Bootcamp%20-%201.%20Hafta.docx)
+- **Daily Scrum**: Daily Scrum toplantıları ilk hafta  discord üzerinden sesli toplantılar şeklinde düzenlenmiştir. Daha sonra whatsapp ve discord chat üzerinden toplantılara devam edilmiştir. [Sprint 1 Daily Scrum Chats](https://github.com/EmirSavukV2/Team-39/blob/main/Bootcamp%20-%201.%20Hafta.docx?raw=true)
 
-- **Sprint board update**: Sprint board screenshotları: 
-![Backlog 1](https://raw.githubusercontent.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/main/ProjectManagement/Sprint1Documents/backlog1.png) 
-![Backlog 2](https://raw.githubusercontent.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/main/ProjectManagement/Sprint1Documents/backlog2.png) 
-![Backlog 3](https://raw.githubusercontent.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/main/ProjectManagement/Sprint1Documents/backlog3.png)
-
-- **Ürün Durumu**: Ekran görüntüleri:
+- **Ürün Durumu**: Ürün tasarımı yapıldı:
   ![Screenshot 1](https://github.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/blob/main/ProjectManagement/Sprint1Documents/productss1.png?raw=true)
   ![Screenshot 2](https://github.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/blob/main/ProjectManagement/Sprint1Documents/productss2.png?raw=true)
 
