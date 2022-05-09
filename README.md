@@ -32,6 +32,10 @@ Team 39
 - Vakti olmayan çalışanlar
 - Yetişkinler
 
+## Product Backlog URL
+
+[Miro Backlog Board](https://miro.com/app/board/uXjVO2G0QBg=/)
+
 ---
 
 # Sprint 1
@@ -43,6 +47,10 @@ Team 39
 
 - **Daily Scrum**: Daily Scrum toplantıları ilk hafta  discord üzerinden sesli toplantılar şeklinde düzenlenmiştir. Daha sonra whatsapp ve discord chat üzerinden toplantılara devam edilmiştir. [Sprint 1 Daily Scrum Chats](https://github.com/EmirSavukV2/Team-39/blob/main/Bootcamp%20-%201.%20Hafta.docx?raw=true)
 
+- **Sprint board update**: Sprint board screenshotları: 
+![Backlog](https://github.com/EmirSavukV2/Team-39/blob/main/miro.png?raw=true) 
+
+
 - **Ürün Durumu**: Ürün tasarımı ekran görüntüleri:
   ![Tasarım 1.1](https://github.com/EmirSavukV2/Team-39/blob/main/1.png?raw=true)
   ![Tasarım 1.2](https://github.com/EmirSavukV2/Team-39/blob/main/2.png?raw=true)
@@ -52,15 +60,16 @@ Team 39
  
   
 - **Sprint Review**: 
-Alınan kararlar: Veritabanı oluşturması email ile toplanacak veriler için gerekli görülmüştür. Fakat bir yandan da veritabanı form sayfası için gerekli olmamıştır. O sebeple PBI bir sonraki sprint'e aktarılmıştır. Çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Ekstra koyulması gereken özellikler belirlenmiştir. Sprint Review katılımcıları: ......
+Alınan kararlar: Google kitaplığın uygulamaya entegre edilmesine karar verildi. 
+
+Sprint Review katılımcıları: Bütün takım üyeleri
 
 - **Sprint Retrospective:**
-  - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır
-  - Tahmin puanları gözden geçirilmeli ve sprint planlama toplantılarında gerekli geri bildirimlerin developer'lar tarafından verildiğine emin olunmalı
-  - Unit test'ler için ayrılan efor/saat arttırılmalı 
+  - Toplantıların daha sık ve her hafta belirli bir günde yapılması kararlaştırıldı.
+  - Takım üyelerinin daha fazla vakit ayırması gerektiği konuşuldu.
+  - Uygulamanın daha basit tutularak teslim tarihine kadar bir ürün çıkarılması gerekliliği konuşuldu.
+  - Görev dağılımlarının daha belirli yapılması gerektiği tartışıldı. 
 
--**Diğer Notlar**:
-- N/A
 
 ---
 
