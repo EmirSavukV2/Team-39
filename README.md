@@ -43,10 +43,14 @@ Team 39
 
 - **Daily Scrum**: Daily Scrum toplantıları ilk hafta  discord üzerinden sesli toplantılar şeklinde düzenlenmiştir. Daha sonra whatsapp ve discord chat üzerinden toplantılara devam edilmiştir. [Sprint 1 Daily Scrum Chats](https://github.com/EmirSavukV2/Team-39/blob/main/Bootcamp%20-%201.%20Hafta.docx?raw=true)
 
-- **Ürün Durumu**: Ürün tasarımı yapıldı:
-  ![Screenshot 1](https://github.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/blob/main/ProjectManagement/Sprint1Documents/productss1.png?raw=true)
-  ![Screenshot 2](https://github.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/blob/main/ProjectManagement/Sprint1Documents/productss2.png?raw=true)
-
+- **Ürün Durumu**: Ürün tasarımı ekran görüntüleri:
+  ![Tasarım 1.1](https://github.com/EmirSavukV2/Team-39/blob/main/1.png?raw=true)
+  ![Tasarım 1.2](https://github.com/EmirSavukV2/Team-39/blob/main/2.png?raw=true)
+  ![Tasarım 1.3](https://github.com/EmirSavukV2/Team-39/blob/main/3.png?raw=true)
+  ![Tasarım 2.1](https://github.com/EmirSavukV2/Team-39/blob/main/4.png?raw=true)
+  ![Tasarım 2.2](https://github.com/EmirSavukV2/Team-39/blob/main/6.png?raw=true)
+ 
+  
 - **Sprint Review**: 
 Alınan kararlar: Veritabanı oluşturması email ile toplanacak veriler için gerekli görülmüştür. Fakat bir yandan da veritabanı form sayfası için gerekli olmamıştır. O sebeple PBI bir sonraki sprint'e aktarılmıştır. Çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Ekstra koyulması gereken özellikler belirlenmiştir. Sprint Review katılımcıları: ......
 
