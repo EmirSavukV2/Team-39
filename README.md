@@ -56,7 +56,7 @@ Team 39
   <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/2.png" width="49%">
   <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/3.png" width="49%">
   <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/4.png" width="49%">
-  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/6.png" width="49%">
+  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/6.png" width="100%">
 
   
 - **Sprint Review**: 
