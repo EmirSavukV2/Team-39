@@ -86,11 +86,10 @@ Sprint Review katılımcıları: Bütün takım üyeleri
 
 
 - **Ürün Durumu**: Uygulama yazılmaya başlandı, uygulamanın screenshotları:
-  ![Tasarım 1.1](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/1.png?raw=true)
-  ![Tasarım 1.2](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/2.png?raw=true)
-  ![Tasarım 1.3](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/3.png?raw=true)
-  ![Tasarım 2.1](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/4.png?raw=true)
-  ![Tasarım 2.2](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/6.png?raw=true)
+  ![Screenshot 1](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_2/Feature%20Tests.jpg?raw=true)
+  ![Screenshot 2](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_2/Pick%20Files.jpg?raw=true)
+  ![Screenshot 3](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_2/ReadScreen.jpg?raw=true)
+  ![Screenshot 4](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_2/ReadScreenPaused.jpg?raw=true)
  
   
 - **Sprint Review**: 
