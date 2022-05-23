@@ -45,18 +45,18 @@ Team 39
 
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 400 puanlık backlog bulunmaktadır. 4 sprint'e bölündüğünde ilk sprint'in en azından 50 ile başlaması gerektiğine karar verildi.
 
-- **Daily Scrum**: Daily Scrum toplantıları ilk hafta  discord üzerinden sesli toplantılar şeklinde düzenlenmiştir. Daha sonra whatsapp ve discord chat üzerinden toplantılara devam edilmiştir. [Sprint 1 Daily Scrum Chats](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/Bootcamp%20-%201.%20Hafta.docx?raw=true)
+- **Daily Scrum**: Daily Scrum toplantıları ilk hafta  discord üzerinden sesli toplantılar şeklinde düzenlenmiştir. Daha sonra whatsapp ve discord chat üzerinden toplantılara devam edilmiştir. [Sprint 1 Daily Scrum Chats](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/Bootcamp%20-%201.%20Hafta.docx?raw=true)
 
 - **Sprint board update**: Sprint board screenshotları: 
-![Backlog](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/miro.png?raw=true) 
+![Backlog](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/miro.png?raw=true) 
 
 
 - **Ürün Durumu**: Sprint board screenshotları:
-  ![Tasarım 1.1](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/1.png?raw=true)
-  ![Tasarım 1.2](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/2.png?raw=true)
-  ![Tasarım 1.3](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/3.png?raw=true)
-  ![Tasarım 2.1](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/4.png?raw=true)
-  ![Tasarım 2.2](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/6.png?raw=true)
+  ![Tasarım 1.1](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/1.png?raw=true)
+  ![Tasarım 1.2](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/2.png?raw=true)
+  ![Tasarım 1.3](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/3.png?raw=true)
+  ![Tasarım 2.1](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/4.png?raw=true)
+  ![Tasarım 2.2](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/6.png?raw=true)
  
   
 - **Sprint Review**: 
@@ -79,10 +79,10 @@ Sprint Review katılımcıları: Bütün takım üyeleri
 
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 400 puanlık backlog bulunmaktadır. İlk sprintte 50 puan tamamlanılmıştır. İkinci sprint için 150 puanın tamamlanması ve projenin yarısının bitirilmiş olması planlandı. 
 
-- **Daily Scrum**: Daily Scrum toplantıları hem discord ve google meet üzerinden sesli bir şekilde hem de whatsapp üzerinden gerçekleştirilmiştir. [Sprint 2 Daily Scrum](https://github.com/EmirSavukV2/Team-39/blob/main/toplantiozeti.png?raw=true)
+- **Daily Scrum**: Daily Scrum toplantıları hem discord ve google meet üzerinden sesli bir şekilde hem de whatsapp üzerinden gerçekleştirilmiştir. [Sprint 2 Daily Scrum](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_2/toplantiozeti.png?raw=true)
 
 - **Sprint board update**: Sprint board screenshotları: 
-![Backlog](https://github.com/EmirSavukV2/Team-39/blob/main/miro2.png?raw=true) 
+![Backlog](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_2/miro2.png?raw=true) 
 
 
 - **Ürün Durumu**: Uygulama yazılmaya başlandı, uygulamanın screenshotları:
