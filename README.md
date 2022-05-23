@@ -45,18 +45,18 @@ Team 39
 
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 400 puanlık backlog bulunmaktadır. 4 sprint'e bölündüğünde ilk sprint'in en azından 50 ile başlaması gerektiğine karar verildi.
 
-- **Daily Scrum**: Daily Scrum toplantıları ilk hafta  discord üzerinden sesli toplantılar şeklinde düzenlenmiştir. Daha sonra whatsapp ve discord chat üzerinden toplantılara devam edilmiştir. [Sprint 1 Daily Scrum Chats](https://github.com/EmirSavukV2/Team-39/blob/main/Bootcamp%20-%201.%20Hafta.docx?raw=true)
+- **Daily Scrum**: Daily Scrum toplantıları ilk hafta  discord üzerinden sesli toplantılar şeklinde düzenlenmiştir. Daha sonra whatsapp ve discord chat üzerinden toplantılara devam edilmiştir. [Sprint 1 Daily Scrum Chats](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/Bootcamp%20-%201.%20Hafta.docx?raw=true)
 
 - **Sprint board update**: Sprint board screenshotları: 
-![Backlog](https://github.com/EmirSavukV2/Team-39/blob/main/miro.png?raw=true) 
+![Backlog](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/miro.png?raw=true) 
 
 
 - **Ürün Durumu**: Ürün tasarımı ekran görüntüleri:
-  ![Tasarım 1.1](https://github.com/EmirSavukV2/Team-39/blob/main/1.png?raw=true)
-  ![Tasarım 1.2](https://github.com/EmirSavukV2/Team-39/blob/main/2.png?raw=true)
-  ![Tasarım 1.3](https://github.com/EmirSavukV2/Team-39/blob/main/3.png?raw=true)
-  ![Tasarım 2.1](https://github.com/EmirSavukV2/Team-39/blob/main/4.png?raw=true)
-  ![Tasarım 2.2](https://github.com/EmirSavukV2/Team-39/blob/main/6.png?raw=true)
+  ![Tasarım 1.1](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/1.png?raw=true)
+  ![Tasarım 1.2](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/2.png?raw=true)
+  ![Tasarım 1.3](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/3.png?raw=true)
+  ![Tasarım 2.1](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/4.png?raw=true)
+  ![Tasarım 2.2](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/6.png?raw=true)
  
   
 - **Sprint Review**: 
