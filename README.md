@@ -51,7 +51,7 @@ Team 39
 ![Backlog](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/miro.png?raw=true) 
 
 
-- **Ürün Durumu**: Ürün tasarımı ekran görüntüleri:
+- **Ürün Durumu**: Sprint board screenshotları:
   ![Tasarım 1.1](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/1.png?raw=true)
   ![Tasarım 1.2](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/2.png?raw=true)
   ![Tasarım 1.3](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/3.png?raw=true)
@@ -75,6 +75,36 @@ Sprint Review katılımcıları: Bütün takım üyeleri
 
 # Sprint 2
 
+- **Sprint içinde tamamlanması tahmin edilen puan**: 150 Puan
+
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 400 puanlık backlog bulunmaktadır. İlk sprintte 50 puan tamamlanılmıştır. İkinci sprint için 150 puanın tamamlanması ve projenin yarısının bitirilmiş olması planlandı. 
+
+- **Daily Scrum**: Daily Scrum toplantıları hem discord ve google meet üzerinden sesli bir şekilde hem de whatsapp üzerinden gerçekleştirilmiştir. [Sprint 2 Daily Scrum](https://github.com/EmirSavukV2/Team-39/blob/main/toplantiozeti.png?raw=true)
+
+- **Sprint board update**: Sprint board screenshotları: 
+![Backlog](https://github.com/EmirSavukV2/Team-39/blob/main/miro2.png?raw=true) 
+
+
+- **Ürün Durumu**: Uygulama yazılmaya başlandı, uygulamanın screenshotları:
+  ![Tasarım 1.1](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/1.png?raw=true)
+  ![Tasarım 1.2](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/2.png?raw=true)
+  ![Tasarım 1.3](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/3.png?raw=true)
+  ![Tasarım 2.1](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/4.png?raw=true)
+  ![Tasarım 2.2](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/6.png?raw=true)
+ 
+  
+- **Sprint Review**: 
+Alınan kararlar: 
+- Uygulamanın google kitaplıkla değil kullanıcıların kendi yükledikleri pdflerle çalışmasına karar verildi.
+- Tasarım kısmına ağırlık verilmesi kararlaştırıldı. 
+
+
+Sprint Review katılımcıları: Bütün takım üyeleri
+
+- **Sprint Retrospective:**:
+  
+  - Toplantı saatlerinin daha net kararlaştırılması konuşuldu.
+  - Fontend kısmına daha fazla yoğunlaşılması gerektiği ve bunun için görev dağılımının yapılması gerektiği kararlaştırıldı. 
 
 ---
 
