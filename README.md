@@ -57,7 +57,12 @@ Team 39
   ![Tasarım 1.3](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/3.png?raw=true)
   ![Tasarım 2.1](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/4.png?raw=true)
   ![Tasarım 2.2](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/6.png?raw=true)
- 
+  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/1.png" width="49%">
+  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/2.png" width="49%">
+  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/3.png" width="49%">
+  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/4.png" width="49%">
+  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_1/6.png" width="49%">
+
   
 - **Sprint Review**: 
 Alınan kararlar: Google kitaplığın uygulamaya entegre edilmesine karar verildi. 
