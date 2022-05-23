@@ -90,7 +90,10 @@ Sprint Review katılımcıları: Bütün takım üyeleri
   ![Screenshot 2](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_2/Pick%20Files.jpg?raw=true)
   ![Screenshot 3](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_2/ReadScreen.jpg?raw=true)
   ![Screenshot 4](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_2/ReadScreenPaused.jpg?raw=true)
- 
+  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_2/Feature%20Tests.jpg" width="20%">
+  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_2/Feature%20Tests.jpg" width="20%">
+  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_2/Feature%20Tests.jpg" width="20%">
+  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_2/Feature%20Tests.jpg" width="20%">
   
 - **Sprint Review**: 
 Alınan kararlar: 
