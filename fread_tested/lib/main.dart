@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:fread/files_page.dart';
+import 'package:fread_tested/files_page.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pdf_text/pdf_text.dart';
 import 'dart:math';
