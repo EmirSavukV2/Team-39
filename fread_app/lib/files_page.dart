@@ -4,11 +4,9 @@ import 'package:open_file/open_file.dart';
 
 class FilesPage extends StatefulWidget {
   final List<PlatformFile> files;
-  final ValueChanged<PlatformFile> onOpenedFile;
   const FilesPage({
     Key? key,
     required this.files,
-    required this.onOpenedFile,
   }) : super(key: key);
 
   @override
@@ -17,7 +15,7 @@ class FilesPage extends StatefulWidget {
 
 class _FilesPageState extends State<FilesPage> {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext contexts) {
     return MaterialApp(
       home: Scaffold(
         body: Center(

@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:fread/files_page.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pdf_text/pdf_text.dart';
 import 'dart:math';
@@ -15,8 +16,24 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SharedPreferences.getInstance().then((value) {
     prefs = value;
-    runApp(const LiveRead());
+    runApp(HomeApp());
   });
+}
+
+class HomeApp extends StatefulWidget {
+  const HomeApp({Key? key}) : super(key: key);
+
+  @override
+  State<HomeApp> createState() => _HomeAppState();
+}
+
+class _HomeAppState extends State<HomeApp> {
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: MyApp(),
+    );
+  }
 }
 
 class MyApp extends StatefulWidget {
@@ -42,89 +59,99 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-          appBar: AppBar(
-            title: const Text('PDF Text Example'),
-          ),
-          body: Container(
-            alignment: Alignment.center,
-            padding: const EdgeInsets.all(10),
-            child: ListView(
-              children: <Widget>[
-                TextButton(
-                  style: TextButton.styleFrom(
-                      padding: const EdgeInsets.all(5),
-                      backgroundColor: Colors.blueAccent),
-                  onPressed: _pickPDFText,
-                  child: const Text(
-                    "Pick PDF document",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                TextButton(
-                  style: TextButton.styleFrom(
-                      padding: const EdgeInsets.all(5),
-                      backgroundColor: Colors.blueAccent),
-                  onPressed: () {
-                    if (_pdfDoc == null || working) {
-                      return;
-                    }
-                    _readRandomPage(10);
-                  },
-                  child: const Text(
-                    "Yazıyı Başlat",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                FloatingActionButton(
-                    onPressed: () {
-                      _startOrStop();
-                    },
-                    child: const Icon(
-                      Icons.pause,
-                    )),
-                Slider(
-                  value: speed,
-                  max: 1000,
-                  divisions: 50,
-                  label: speed.round().toString(),
-                  onChanged: (double value) {
-                    setState(() {
-                      _timeChange(value);
-                    });
-                  },
-                ),
-                ElevatedButton(
-                    onPressed: getPDFList, child: const Text("Shared Get")),
-                ElevatedButton(
-                    onPressed: () {
-                      readBooks(pdfLists.last);
-                    },
-                    child: const Text("Read Text")),
-                Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: Text(
-                    _pdfDoc == null
-                        ? "Pick a new PDF document and wait for it to load..."
-                        : "PDF document loaded, ${_pdfDoc!.length} pages\n",
-                    style: const TextStyle(fontSize: 18),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: Text(
-                    _text == "" ? "" : "Text:",
-                    style: const TextStyle(fontSize: 18),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Text(_text),
-                Text(pdfLists.toString()),
-              ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('PDF Text Example'),
+      ),
+      body: Container(
+        alignment: Alignment.center,
+        padding: const EdgeInsets.all(10),
+        child: ListView(
+          children: <Widget>[
+            TextButton(
+              style: TextButton.styleFrom(
+                  padding: const EdgeInsets.all(5),
+                  backgroundColor: Colors.blueAccent),
+              onPressed: _pickPDFText,
+              child: const Text(
+                "Pick PDF document",
+                style: TextStyle(color: Colors.white),
+              ),
             ),
-          )),
+            TextButton(
+              style: TextButton.styleFrom(
+                  padding: const EdgeInsets.all(5),
+                  backgroundColor: Colors.blueAccent),
+              onPressed: () {
+                if (_pdfDoc == null || working) {
+                  return;
+                }
+                _readRandomPage(10);
+              },
+              child: const Text(
+                "Yazıyı Başlat",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+            FloatingActionButton(
+                onPressed: () {
+                  _startOrStop();
+                },
+                child: const Icon(
+                  Icons.pause,
+                )),
+            Slider(
+              value: speed,
+              max: 1000,
+              divisions: 50,
+              label: speed.round().toString(),
+              onChanged: (double value) {
+                setState(() {
+                  _timeChange(value);
+                });
+              },
+            ),
+            ElevatedButton(
+                onPressed: getPDFList, child: const Text("Shared Get")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => FilesPage(
+                        files: getPDFList(),
+                      ),
+                    ),
+                  );
+                },
+                child: const Text("Go List")),
+            ElevatedButton(
+                onPressed: () {
+                  readBooks(pdfLists.last);
+                },
+                child: const Text("Read Text")),
+            Padding(
+              padding: const EdgeInsets.all(15),
+              child: Text(
+                _pdfDoc == null
+                    ? "Pick a new PDF document and wait for it to load..."
+                    : "PDF document loaded, ${_pdfDoc!.length} pages\n",
+                style: const TextStyle(fontSize: 18),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15),
+              child: Text(
+                _text == "" ? "" : "Text:",
+                style: const TextStyle(fontSize: 18),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            Text(_text),
+            Text(pdfLists.toString()),
+          ],
+        ),
+      ),
     );
   }
 
@@ -148,9 +175,7 @@ class _MyAppState extends State<MyApp> {
         await FilePicker.platform.pickFiles(allowMultiple: true);
     if (filePickerResult != null) {
       for (var i = 0; i < filePickerResult.files.length; i++) {
-        print(filePickerResult.files[i].path!);
         final newFile = await saveFilePeramently(filePickerResult.files[i]);
-        print(newFile.path);
         pdfLists.add(newFile.path);
       }
       addPDFList();
@@ -162,17 +187,11 @@ class _MyAppState extends State<MyApp> {
   void addPDFList() async {
     setState(() {
       prefs!.setStringList('pdf', pdfLists);
-      print("Shared : ${prefs!.getStringList('pdf')}");
     });
   }
 
-  void getPDFList() async {
-    print(" TEST ");
-
-    setState(() {
-      prefs!.getStringList('pdf');
-      print(prefs!.getStringList('pdf'));
-    });
+  getPDFList() async {
+    return prefs!.getStringList('pdf');
   }
 
   /// Reads a random page of the document

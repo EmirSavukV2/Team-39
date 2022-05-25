@@ -49,7 +49,6 @@ class _MyAppsState extends State<MyApps> {
       MaterialPageRoute(
         builder: (context) => FilesPage(
           files: files,
-          onOpenedFile: openFile,
         ),
       ),
     );
