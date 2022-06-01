@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fread/constants/style.dart';
 
 import 'components/body.dart';
 
@@ -7,8 +8,14 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        appBar: AppBar(
+          leading: BackButton(
+            color: kPrimaryColor,
+          ),
+        ),
         body: Body(),
       ),
     );

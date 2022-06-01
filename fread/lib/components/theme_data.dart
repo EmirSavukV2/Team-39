@@ -19,7 +19,7 @@ ThemeData kThemeData = ThemeData(
       900: Color(0xff1c292d), //100%
     },
   ),
-  fontFamily: "SF_PRO",
+  fontFamily: "Poppins",
   colorScheme: const ColorScheme(
     brightness: Brightness.light,
     primary: kPrimaryColor,
@@ -47,15 +47,16 @@ ThemeData kThemeData = ThemeData(
     headline1: TextStyle(
       color: kPrimaryColor,
       fontWeight: FontWeight.w700,
+      height: 1.1,
       fontSize: SizerUtil.deviceType == DeviceType.mobile ? 42.sp : 42.sp,
     ),
     bodyText1: TextStyle(
       color: kTextColor,
-      fontWeight: FontWeight.w400,
+      fontWeight: FontWeight.w500,
       fontSize: SizerUtil.deviceType == DeviceType.mobile ? 12.sp : 12.sp,
       height: 1.4,
     ),
-    button: TextStyle(
+    button: const TextStyle(
       color: Colors.white,
     ),
   ),
@@ -63,20 +64,24 @@ ThemeData kThemeData = ThemeData(
     style: ElevatedButton.styleFrom(
         shadowColor: kPrimaryColor,
         elevation: 6,
-        padding: EdgeInsets.symmetric(vertical: kDefaultPadding),
-        textStyle: TextStyle(
+        minimumSize: Size(80.w, 10),
+        maximumSize: const Size(412, 100),
+        padding: EdgeInsets.all(kDefaultPadding),
+        textStyle: const TextStyle(
           color: Colors.white,
-          fontSize: SizerUtil.deviceType == DeviceType.mobile ? 14.sp : 6.sp,
+          fontSize: 18,
           fontWeight: FontWeight.bold,
         ),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
   ),
   textButtonTheme: TextButtonThemeData(
     style: TextButton.styleFrom(
-      padding: EdgeInsets.symmetric(vertical: kDefaultPadding),
-      textStyle: TextStyle(
+      minimumSize: Size(80.w, 10),
+      maximumSize: const Size(412, 100),
+      padding: EdgeInsets.all(kDefaultPadding),
+      textStyle: const TextStyle(
         color: kPrimaryColor,
-        fontSize: SizerUtil.deviceType == DeviceType.mobile ? 14.sp : 6.sp,
+        fontSize: 18,
         fontWeight: FontWeight.bold,
       ),
     ),

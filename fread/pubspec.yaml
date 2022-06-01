@@ -17,7 +17,7 @@ dependencies:
   # Text
   auto_size_text: ^3.0.0
   sizer: ^2.0.15
-  
+  easy_localization: ^3.0.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -31,37 +31,56 @@ flutter:
   assets:
     - assets/images/auth/welcome.png
     - assets/icons/
+    - assets/translations/
 
   fonts:
     - family: SF_PRO
       fonts:
-        - asset: assets/fonts/SFPRODISPLAYTHINITALIC.OTF
+        - asset: assets/fonts/SF_PRO/SFPRODISPLAYTHINITALIC.OTF
           style: italic
           weight: 200
-        - asset: assets/fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF
+        - asset: assets/fonts/SF_PRO/SFPRODISPLAYULTRALIGHTITALIC.OTF
           style: italic
           weight: 300
-        - asset: assets/fonts/SFPRODISPLAYLIGHTITALIC.OTF
+        - asset: assets/fonts/SF_PRO/SFPRODISPLAYLIGHTITALIC.OTF
           style: italic
           weight: 400
-        - asset: assets/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF
+        - asset: assets/fonts/SF_PRO/SFPRODISPLAYSEMIBOLDITALIC.OTF
           style: italic
           weight: 500
-        - asset: assets/fonts/SFPRODISPLAYBLACKITALIC.OTF
+        - asset: assets/fonts/SF_PRO/SFPRODISPLAYBLACKITALIC.OTF
           style: italic
           weight: 600
-        - asset: assets/fonts/SFPRODISPLAYHEAVYITALIC.OTF
+        - asset: assets/fonts/SF_PRO/SFPRODISPLAYHEAVYITALIC.OTF
           style: italic
           weight: 700
-        - asset: assets/fonts/SFPRODISPLAYREGULAR.OTF
+        - asset: assets/fonts/SF_PRO/SFPRODISPLAYREGULAR.OTF
           style: normal
           weight: 400
-        - asset: assets/fonts/SFPRODISPLAYMEDIUM.OTF
+        - asset: assets/fonts/SF_PRO/SFPRODISPLAYMEDIUM.OTF
           style: normal
           weight: 500
-        - asset: assets/fonts/SFPRODISPLAYSEMIBOLD.ttf
+        - asset: assets/fonts/SF_PRO/SFPRODISPLAYSEMIBOLD.ttf
           style: normal
           weight: 600
-        - asset: assets/fonts/SFPRODISPLAYBOLD.OTF
+        - asset: assets/fonts/SF_PRO/SFPRODISPLAYBOLD.OTF
           style: normal
           weight: 700
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-Regular.OTF
+          style: normal
+          weight: 400
+        - asset: assets/fonts/Poppins/Poppins-Medium.otf
+          style: normal
+          weight: 500
+        - asset: assets/fonts/Poppins/Poppins-SemiBold.otf
+          style: normal
+          weight: 600
+        - asset: assets/fonts/Poppins/Poppins-Bold.otf
+          style: normal
+          weight: 700
+        - asset: assets/fonts/Poppins/Poppins-Black.otf
+          style: normal
+          weight: 800
+ 
