@@ -28,7 +28,7 @@ class Body extends StatelessWidget {
           Align(
             alignment: Alignment.centerLeft,
             child: AutoSizeText(
-              "login.title".tr(),
+              "auth.login.title".tr(),
               textAlign: TextAlign.left,
               style: Theme.of(context).textTheme.headline1,
               maxLines: 2,
@@ -36,19 +36,19 @@ class Body extends StatelessWidget {
           ),
           SizedBox(height: kDefaultPadding * 2),
           AutoSizeText(
-            "login.subtitle".tr(),
+            "auth.login.subtitle".tr(),
             textAlign: TextAlign.left,
             style: Theme.of(context).textTheme.bodyText1,
             maxLines: 4,
           ),
           const Spacer(),
           LoginInputField(
-            hintText: "login.email".tr(),
+            hintText: "auth.login.email".tr(),
             inputController: TextEditingController(),
           ),
           SizedBox(height: kDefaultPadding * 2),
           PasswordInput(
-            hintText: "login.password".tr(),
+            hintText: "auth.login.password".tr(),
             textEditingController: TextEditingController(),
           ),
           const Spacer(),
@@ -61,11 +61,11 @@ class Body extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, '/home');
                 },
-                child: Text("login.login".tr()),
+                child: Text("auth.login.login".tr()),
               ),
               SizedBox(height: kDefaultPadding * 2),
               AutoSizeText(
-                "login.forgotPassword".tr(),
+                "auth.login.forgotPassword".tr(),
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.bodyText1,
               ),
@@ -78,7 +78,7 @@ class Body extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
                 ),
-                child: Text("login.restartPassword".tr()),
+                child: Text("auth.login.restartPassword".tr()),
               ),
             ],
           ),

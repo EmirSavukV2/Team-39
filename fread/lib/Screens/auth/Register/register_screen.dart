@@ -10,7 +10,6 @@ class RegisterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           leading: const BackButton(
             color: kPrimaryColor,

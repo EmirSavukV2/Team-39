@@ -72,18 +72,18 @@ ThemeData kThemeData = ThemeData(
           fontSize: 18,
           fontWeight: FontWeight.bold,
         ),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18))),
   ),
   textButtonTheme: TextButtonThemeData(
     style: TextButton.styleFrom(
-      minimumSize: Size(80.w, 10),
-      maximumSize: const Size(412, 100),
-      padding: EdgeInsets.all(kDefaultPadding),
-      textStyle: const TextStyle(
-        color: kPrimaryColor,
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
+        minimumSize: Size(80.w, 10),
+        maximumSize: const Size(412, 100),
+        padding: EdgeInsets.all(kDefaultPadding),
+        textStyle: const TextStyle(
+          color: kPrimaryColor,
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18))),
   ),
 );

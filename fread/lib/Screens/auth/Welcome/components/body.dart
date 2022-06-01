@@ -30,14 +30,14 @@ class Body extends StatelessWidget {
           Align(
             alignment: Alignment.centerLeft,
             child: AutoSizeText(
-              "welcome.title".tr(),
+              "auth.welcome.title".tr(),
               textAlign: TextAlign.left,
               style: Theme.of(context).textTheme.headline1,
               maxLines: 2,
             ),
           ),
           AutoSizeText(
-            "welcome.subtitle".tr(),
+            "auth.welcome.subtitle".tr(),
             textAlign: TextAlign.left,
             style: Theme.of(context).textTheme.bodyText1,
             maxLines: 4,
@@ -51,11 +51,11 @@ class Body extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, '/register');
                 },
-                child: Text("welcome.registerButton".tr()),
+                child: Text("auth.welcome.registerButton".tr()),
               ),
               SizedBox(height: kDefaultPadding * 2),
               AutoSizeText(
-                "welcome.haveAccount".tr(),
+                "auth.welcome.haveAccount".tr(),
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.bodyText1,
               ),
@@ -68,7 +68,7 @@ class Body extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
                 ),
-                child: Text("welcome.login".tr()),
+                child: Text("auth.welcome.login".tr()),
               ),
             ],
           ),

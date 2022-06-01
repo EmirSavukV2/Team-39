@@ -37,7 +37,7 @@ class _BodyState extends State<Body> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: AutoSizeText(
-                  "register.title".tr(),
+                  "auth.register.title".tr(),
                   textAlign: TextAlign.left,
                   style: Theme.of(context).textTheme.headline1,
                   maxLines: 2,
@@ -45,7 +45,7 @@ class _BodyState extends State<Body> {
               ),
               SizedBox(height: kDefaultPadding * 2),
               AutoSizeText(
-                "register.subtitle".tr(),
+                "auth.register.subtitle".tr(),
                 textAlign: TextAlign.left,
                 style: Theme.of(context).textTheme.bodyText1,
                 maxLines: 4,
@@ -55,14 +55,14 @@ class _BodyState extends State<Body> {
                 children: [
                   Expanded(
                     child: LoginInputField(
-                      hintText: "register.name".tr(),
+                      hintText: "auth.register.name".tr(),
                       inputController: TextEditingController(),
                     ),
                   ),
                   SizedBox(width: kDefaultPadding),
                   Expanded(
                     child: LoginInputField(
-                      hintText: "register.surname".tr(),
+                      hintText: "auth.register.surname".tr(),
                       inputController: TextEditingController(),
                     ),
                   )
@@ -70,7 +70,7 @@ class _BodyState extends State<Body> {
               ),
               SizedBox(height: kDefaultPadding / 2),
               LoginInputField(
-                hintText: "register.mail".tr(),
+                hintText: "auth.register.mail".tr(),
                 inputController: TextEditingController(),
               ),
               SizedBox(height: kDefaultPadding / 2),
@@ -79,7 +79,7 @@ class _BodyState extends State<Body> {
                   _selectDate(context);
                 },
                 child: LoginInputField(
-                  hintText: "register.birtday".tr(),
+                  hintText: "auth.register.birtday".tr(),
                   enabled: false,
                   inputController: TextEditingController()
                     ..text =
@@ -89,12 +89,12 @@ class _BodyState extends State<Body> {
               SizedBox(height: kDefaultPadding / 2),
               SizedBox(height: kDefaultPadding / 2),
               PasswordInput(
-                hintText: "register.password".tr(),
+                hintText: "auth.register.password".tr(),
                 textEditingController: TextEditingController(),
               ),
               SizedBox(height: kDefaultPadding / 2),
               PasswordInput(
-                hintText: "register.passwordRetry".tr(),
+                hintText: "auth.register.passwordRetry".tr(),
                 textEditingController: TextEditingController(),
               ),
               SizedBox(height: kDefaultPadding * 2),
@@ -107,11 +107,11 @@ class _BodyState extends State<Body> {
                     onPressed: () {
                       Navigator.pushNamed(context, '/home');
                     },
-                    child: Text("register.registerButton".tr()),
+                    child: Text("auth.register.registerButton".tr()),
                   ),
                   SizedBox(height: kDefaultPadding * 2),
                   AutoSizeText(
-                    "register.haveAccount".tr(),
+                    "auth.register.haveAccount".tr(),
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
@@ -124,7 +124,7 @@ class _BodyState extends State<Body> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
                     ),
-                    child: Text("register.login".tr()),
+                    child: Text("auth.register.login".tr()),
                   ),
                 ],
               ),
