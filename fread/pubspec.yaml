@@ -39,7 +39,7 @@ flutter:
 
   assets:
     - assets/images/auth/welcome.png
-    - assets/icons/
+    - assets/images/avatars/
     - assets/translations/
     - assets/splash/flutter_native_splash.yaml
 

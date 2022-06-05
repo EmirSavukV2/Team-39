@@ -16,6 +16,8 @@ class Body extends StatelessWidget {
           top: kDefaultPadding * 2,
           bottom: kDefaultPadding,
         ),
-        child: Text('HOME SCREEn'));
+        child: Column(
+          children: [Image.asset("assets/images/avatars/avataaars.png")],
+        ));
   }
 }
