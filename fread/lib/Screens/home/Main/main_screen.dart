@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fread/constants/style.dart';
 
-import '../../../components/sidebar.dart';
+import '../../../components/sidebar/sidebar.dart';
 import 'components/body.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: () => scaffoldKey.currentState?.openDrawer(),
               icon: Icon(Icons.menu)),
         ),
-        drawer: const SideBar(),
+        drawer: Sidebar(),
         body: Body(),
       ),
     );

@@ -37,10 +37,10 @@ class MyApp extends StatelessWidget {
           localizationsDelegates: context.localizationDelegates,
           locale: LocaleConstants.TR_LOCALE,
           routes: {
-            '/': ((context) => const WelcomeScreen()),
+            '/welcome': ((context) => const WelcomeScreen()),
             '/login': ((context) => const LoginScreen()),
             '/register': ((context) => const RegisterScreen()),
-            '/home': ((context) => const HomeScreen()),
+            '/': ((context) => const HomeScreen()),
           },
         );
       },

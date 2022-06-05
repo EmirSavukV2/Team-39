@@ -48,7 +48,13 @@ ThemeData kThemeData = ThemeData(
       color: kPrimaryColor,
       fontWeight: FontWeight.w700,
       height: 1.1,
-      fontSize: SizerUtil.deviceType == DeviceType.mobile ? 42.sp : 42.sp,
+      fontSize: 54,
+    ),
+    headline2: TextStyle(
+      color: kPrimaryColor,
+      fontWeight: FontWeight.w700,
+      height: 1.1,
+      fontSize: 42,
     ),
     bodyText1: TextStyle(
       color: kTextColor,
@@ -59,6 +65,12 @@ ThemeData kThemeData = ThemeData(
     bodyText2: TextStyle(
       color: kPrimaryColor,
       fontSize: 14,
+      fontWeight: FontWeight.w600,
+    ),
+    caption: TextStyle(
+      color: kTextColor,
+      letterSpacing: 0.4,
+      fontSize: 12,
       fontWeight: FontWeight.w600,
     ),
     button: const TextStyle(
