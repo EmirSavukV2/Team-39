@@ -121,7 +121,7 @@ Sprint Review katılımcıları: Bütün takım üyeleri
 
 
 - **Ürün Durumu**: Uygulamanın screenshotları:
-  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_3/screenshot1.jpg" width="30%">
+  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_3/screenshot1.jpg" width="49%">
   <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_3/screenshot2.jpg" width="49%">
   <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_3/screenshot3.jpg" width="49%">
   <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_3/screenshot4.jpg" width="49%">
