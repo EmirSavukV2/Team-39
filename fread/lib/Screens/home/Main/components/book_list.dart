@@ -20,7 +20,7 @@ class BookBuilder extends StatelessWidget {
             "rate": "4.5",
             "intro": "Inro Text",
             "image": "assets/images/books/sherlock.jpg",
-            "pdf": "assets/book/nur.pdf"
+            "pdf": "assets/books/nur.pdf"
           });
         },
       ),

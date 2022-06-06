@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:pdf_text/pdf_text.dart';
@@ -10,7 +11,6 @@ class Body extends StatefulWidget {
     required this.bookName,
     required this.pdf,
   }) : super(key: key);
-
   @override
   State<Body> createState() => _BodyState();
 }
@@ -20,12 +20,11 @@ class _BodyState extends State<Body> {
   Color _textColor = Colors.white70;
   PDFDoc? _pdfDoc;
   String _text = "";
-
   Timer? timers;
   int factor = 0;
   double speed = 800.0;
   bool working = false;
-  @override
+  bool first = false;
   Widget build(BuildContext context) {
     return AnimatedContainer(
         duration: const Duration(milliseconds: 200),
@@ -54,7 +53,9 @@ class _BodyState extends State<Body> {
                   children: [
                     IconButton(
                       alignment: Alignment.topCenter,
-                      onPressed: () {},
+                      onPressed: () {
+                        print(widget.pdf);
+                      },
                       icon: Icon(
                         Icons.minimize,
                         color: _textColor,
@@ -78,13 +79,11 @@ class _BodyState extends State<Body> {
               child: FloatingActionButton(
                 onPressed: () {
                   setState(() {
-                    if (working) {
-                      _startOrStop();
-                      _bgColor = Colors.red;
-                      _textColor = Colors.white;
-                    } else {
-                      _bgColor = Colors.black87;
-                      _textColor = Colors.white;
+                    _startOrStop();
+                    print(widget.pdf);
+                    if (!first) {
+                      pickPDFText();
+                      first = true;
                     }
                   });
                 },
@@ -106,8 +105,9 @@ class _BodyState extends State<Body> {
   }
 
   /// Picks a new PDF document from the device
-  pickPDFText() {
-    var _pdfDoc = widget.pdf;
+  Future pickPDFText() async {
+    File asd = File(widget.pdf);
+    var _pdfDoc = await PDFDoc.fromFile(asd);
 
     setState(() {});
   }
@@ -115,7 +115,7 @@ class _BodyState extends State<Body> {
   /// Reads a random page of the document
   _readRandomPage(palace) {
     String text;
-    (_pdfDoc!.text).then((value) {
+    (_pdfDoc?.text)?.then((value) {
       working = true;
       text = value;
       final textt = text.split(" ");
@@ -124,6 +124,7 @@ class _BodyState extends State<Body> {
         factor++;
         setState(() {
           _text = textt[factor];
+          print(_text);
         });
       });
     });
@@ -133,8 +134,12 @@ class _BodyState extends State<Body> {
     if (working) {
       working = false;
       timers?.cancel();
+      _bgColor = Colors.red;
+      _textColor = Colors.white;
     } else {
       _readRandomPage(factor);
+      _bgColor = Colors.black87;
+      _textColor = Colors.white;
     }
   }
 }

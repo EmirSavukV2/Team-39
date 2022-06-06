@@ -50,6 +50,7 @@ flutter:
     - assets/images/avatars/
     - assets/images/illustrator/
     - assets/images/books/
+    - assets/books/
     - assets/translations/
     - assets/splash/flutter_native_splash.yaml
 
