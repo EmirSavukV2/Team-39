@@ -122,6 +122,7 @@ Sprint Review katılımcıları: Bütün takım üyeleri
 
 - **Ürün Durumu**: Uygulamanın screenshotları:
 
+  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_3/tanitim.jpg" width="100%">
   <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_3/screenshot1.jpg" width="49%">
   <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_3/screenshot2.jpg" width="49%">
   <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_3/screenshot3.jpg" width="49%">
@@ -130,16 +131,17 @@ Sprint Review katılımcıları: Bütün takım üyeleri
 
   
 - **Sprint Review**: 
-Alınan kararlar: 
-- Uygulamanın google kitaplıkla değil kullanıcıların kendi yükledikleri pdflerle çalışmasına karar verildi.
-- Tasarım kısmına ağırlık verilmesi kararlaştırıldı. 
+
+- Uygulamadan bazı kısımlar yetiştirilemediği için çıkartıldı: kullanıcı başarı sıralaması vb.
+- Anket çalışması yapılmadı
+- Kitapçık çalışması yerine daha kısa bir tanıtım sayfası hazırlandı
 
 
 Sprint Review katılımcıları: Bütün takım üyeleri
 
 - **Sprint Retrospective:**:
   
-  - Toplantı saatlerinin daha net kararlaştırılması konuşuldu.
-  - Fontend kısmına daha fazla yoğunlaşılması gerektiği ve bunun için görev dağılımının yapılması gerektiği kararlaştırıldı.
-  - 
+  - Bir sonraki projede takım üyelerinin boş vakitleri belirlenerek daha iyi bir zaman yönetimi yapılabilir
+  - Uygulamanın ana kısmına daha fazla önem verilmesi sürecin daha başarılı geçmesini ve ana hedef olan çalışır proje çıkarılmasını garantileyebilir.
+  
 ---
