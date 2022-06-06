@@ -20,14 +20,14 @@ class _HomeScreenState extends State<HomeScreen> {
         key: scaffoldKey,
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          title: Text("Anasayfa"),
-          iconTheme: IconThemeData(color: kPrimaryColor),
+          title: const Text("Anasayfa"),
+          iconTheme: const IconThemeData(color: kPrimaryColor),
           leading: IconButton(
               onPressed: () => scaffoldKey.currentState?.openDrawer(),
-              icon: Icon(Icons.menu)),
+              icon: const Icon(Icons.menu)),
         ),
-        drawer: Sidebar(),
-        body: Body(),
+        drawer: const Sidebar(),
+        body: const Body(),
       ),
     );
   }

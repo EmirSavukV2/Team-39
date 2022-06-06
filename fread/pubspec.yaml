@@ -23,6 +23,11 @@ dependencies:
   introduction_screen: ^3.0.2
   flutter_native_splash: ^2.2.2
   
+  #firabase
+  firebase_auth: ^3.3.19
+  cloud_firestore: ^3.1.17
+  firebase_core: ^1.17.1
+  
 flutter_native_splash:
   color: "#ffffff"
   image: "assets/splash/splash_400.png"
@@ -44,6 +49,7 @@ flutter:
   assets:
     - assets/images/auth/welcome.png
     - assets/images/avatars/
+    - assets/images/illustrator/
     - assets/images/books/
     - assets/translations/
     - assets/splash/flutter_native_splash.yaml

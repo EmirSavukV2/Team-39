@@ -1,13 +1,28 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fread/constants/style.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../components/input_field.dart';
 
-class Body extends StatelessWidget {
+class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
+
+  @override
+  State<Body> createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,12 +59,12 @@ class Body extends StatelessWidget {
           const Spacer(),
           LoginInputField(
             hintText: "auth.login.email".tr(),
-            inputController: TextEditingController(),
+            inputController: emailController,
           ),
           SizedBox(height: kDefaultPadding * 2),
           PasswordInput(
             hintText: "auth.login.password".tr(),
-            textEditingController: TextEditingController(),
+            textEditingController: passwordController,
           ),
           const Spacer(),
           Wrap(
@@ -58,9 +73,7 @@ class Body extends StatelessWidget {
             crossAxisAlignment: WrapCrossAlignment.center,
             children: [
               ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/home');
-                },
+                onPressed: signIn,
                 child: Text("auth.login.login".tr()),
               ),
               SizedBox(height: kDefaultPadding * 2),
@@ -85,5 +98,18 @@ class Body extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Future signIn() async {
+    if (emailController.text.trim() == "emirsvk55@gmail.com" &&
+        passwordController.text.trim() == "18502000") {
+      Navigator.pushNamed(context, '/home');
+    } else {
+      final snackBar = SnackBar(
+        content: const Text('Wrong email or password '),
+        action: SnackBarAction(label: 'Undo', onPressed: () {}),
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    }
   }
 }

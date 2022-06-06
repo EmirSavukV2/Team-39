@@ -17,7 +17,7 @@ class _IntroScreenState extends State<IntroScreen> {
   }
 
   Widget _buildImage(String assetName, [double width = 300]) {
-    return Image.asset('assets/images/auth/$assetName', width: width);
+    return Image.asset('assets/images/illustrator/$assetName', width: width);
   }
 
   @override
@@ -30,44 +30,41 @@ class _IntroScreenState extends State<IntroScreen> {
       bodyPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
       pageColor: Colors.white,
       imagePadding: EdgeInsets.zero,
+      imageFlex: 2,
+      bodyFlex: 1,
+      bodyAlignment: Alignment.topCenter,
+      imageAlignment: Alignment.center,
     );
     return IntroductionScreen(
       key: introKey,
       globalBackgroundColor: Colors.white,
+      isTopSafeArea: true,
       pages: [
         PageViewModel(
-          title: "Fractional shares",
-          body:
-              "Instead of having to buy an entire share, invest any amount you want.",
-          image: _buildImage('welcome.png'),
+          title: "FRead'e Hoş Geldin!",
+          body: "FRead sizlere neler sunuyor bir göz atalım.",
+          image: _buildImage('1.webp'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Fractional shares",
           body:
-              "Instead of having to buy an entire share, invest any amount you want.",
-          image: _buildImage('welcome.png'),
+              "Okuma hızınızın artmasını ve kısa sürede daha fazla kitap okumayı ister misin?",
+          title: "",
+          image: _buildImage('2.webp'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Fractional shares",
           body:
-              "Instead of having to buy an entire share, invest any amount you want.",
-          image: _buildImage('welcome.png'),
+              "O zaman FRead tam sana göre!\nYapman gereken tek şey okumak istediğin herhangi bir metni PDF formatında FRead'e yüklemek",
+          title: "",
+          image: _buildImage('3.webp'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Fractional shares",
-          body:
-              "Instead of having to buy an entire share, invest any amount you want.",
-          image: _buildImage('welcome.png'),
-          decoration: pageDecoration,
-        ),
-        PageViewModel(
-          title: "Fractional shares",
-          body:
-              "Instead of having to buy an entire share, invest any amount you want.",
-          image: _buildImage('welcome.png'),
+          title:
+              "Hem kişisel dosyalarınızı hem de uygulamamızda ki kitap ve belgeleri birbirinden farklı methodlarla okumak için\nHaydi başlayalım",
+          body: "",
+          image: _buildImage('4.webp'),
           decoration: pageDecoration,
         ),
       ],

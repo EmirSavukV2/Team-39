@@ -1,7 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:fread/constants/style.dart';
-import 'package:introduction_screen/introduction_screen.dart';
 import 'package:sizer/sizer.dart';
 import 'Screens/auth/Login/login_screen.dart';
 import 'Screens/auth/Register/register_screen.dart';
@@ -40,12 +38,12 @@ class MyApp extends StatelessWidget {
           localizationsDelegates: context.localizationDelegates,
           locale: LocaleConstants.TR_LOCALE,
           routes: {
-            '/intro': ((context) => const IntroScreen()),
+            '/': ((context) => const IntroScreen()),
             '/welcome': ((context) => const WelcomeScreen()),
             '/login': ((context) => const LoginScreen()),
             '/register': ((context) => const RegisterScreen()),
             '/book-detail': ((context) => const BookDetail()),
-            '/': ((context) => const HomeScreen()),
+            '/home': ((context) => const HomeScreen()),
           },
         );
       },
