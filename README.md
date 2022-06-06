@@ -114,18 +114,17 @@ Sprint Review katılımcıları: Bütün takım üyeleri
 
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanılması gereken 400 puanlık backlog bulunmaktadır. İlk iki sprintte toplam 200 puan toplanarak projenin yarısı tamamlanmıştır. 3. sprintte 200 puan tamamlanılması ve projenin bitirilmesi hedeflenmektedir. 
 
-- **Daily Scrum**: Daily Scrum toplantıları hem discord  üzerinden sesli bir şekilde hem de whatsapp üzerinden gerçekleştirilmiştir. [Sprint 3 Daily Scrum]
-(https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_3/sprint3_toplantiozetleri.docx?raw=true)
+- **Daily Scrum**: Daily Scrum toplantıları hem discord  üzerinden sesli bir şekilde hem de whatsapp üzerinden gerçekleştirilmiştir. [Sprint 3 Daily Scrum](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_3/sprint3_toplantiozetleri.docx?raw=true)
 
 - **Sprint board update**: Sprint board screenshotları: 
-![Backlog](https://github.com/EmirSavukV2/Team-39/blob/main/eadme_assets/sprint_2/miro2.png?raw=true) 
+![Backlog](https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_3/miro3.png?raw=true) 
 
 
-- **Ürün Durumu**: Uygulama yazılmaya başlandı, uygulamanın screenshotları:
-  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_2/Feature%20Tests.jpg" width="49%">
-  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_2/Pick%20Files.jpg" width="49%">
-  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_2/ReadScreen.jpg" width="49%">
-  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_2/ReadScreenPaused.jpg" width="49%">
+- **Ürün Durumu**: Uygulamanın screenshotları:
+  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_3/screenshot1.jpg" width="49%">
+  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_3/screenshot2.jpg" width="49%">
+  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_3/screenshot3.jpg" width="49%">
+  <img src="https://github.com/EmirSavukV2/Team-39/blob/main/readme_assets/sprint_3/screenshot4.jpg.jpg" width="49%">
 
 
   
