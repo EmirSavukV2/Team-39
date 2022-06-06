@@ -143,7 +143,12 @@ class Body extends StatelessWidget {
                     padding: EdgeInsets.all(kDefaultPadding),
                     child: ElevatedButton(
                       child: Text("Countinue Reading"),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/live-read', arguments: {
+                          "title": title,
+                          "pdf": pdf,
+                        });
+                      },
                     ),
                   ),
                 ],

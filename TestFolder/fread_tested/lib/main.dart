@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'demo/demo_main.dart';
+import 'demo/files_page.dart';
 import 'demo/live_read.dart';
 import 'screens/login.dart';
 
@@ -15,7 +17,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: "FRead App",
       theme: ThemeData.dark(),
-      home: LiveRead(),
+      home: MyApp(),
     );
   }
 }

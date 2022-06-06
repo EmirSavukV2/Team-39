@@ -3,12 +3,7 @@ import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:fread_tested/demo/files_page.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:pdf_text/pdf_text.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
-SharedPreferences? prefs;
 
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -86,21 +81,8 @@ class _MyAppState extends State<MyApp> {
               },
             ),
             ElevatedButton(
-                onPressed: getPDFList, child: const Text("Shared Get")),
-            ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => FilesPage(
-                        files: getPDFList(),
-                      ),
-                    ),
-                  );
-                },
-                child: const Text("Go List")),
-            ElevatedButton(
-                onPressed: () {
-                  readBooks(pdfLists.last);
+                  _readRandomPage(0);
                 },
                 child: const Text("Read Text")),
             Padding(
@@ -122,7 +104,7 @@ class _MyAppState extends State<MyApp> {
               ),
             ),
             Text(_text),
-            Text(pdfLists.toString()),
+            Text(_pdfDoc.toString()),
           ],
         ),
       ),
@@ -135,37 +117,14 @@ class _MyAppState extends State<MyApp> {
     _readRandomPage(factor);
   }
 
-  Future<File> saveFilePeramently(PlatformFile file) async {
-    final appStorage = await getApplicationDocumentsDirectory();
-    final newFile = File('${appStorage.path}/${file.name}');
-    return File(file.path!).copy(newFile.path);
-  }
-
-  List<String> pdfLists = [];
-
   /// Picks a new PDF document from the device
   Future _pickPDFText() async {
     var filePickerResult =
         await FilePicker.platform.pickFiles(allowMultiple: true);
     if (filePickerResult != null) {
-      for (var i = 0; i < filePickerResult.files.length; i++) {
-        final newFile = await saveFilePeramently(filePickerResult.files[i]);
-        pdfLists.add(newFile.path);
-      }
-      addPDFList();
-      // _pdfDoc = await PDFDoc.fromPath(filePickerResult.files.single.path!);
+      _pdfDoc = await PDFDoc.fromPath(filePickerResult.files.single.path!);
       setState(() {});
     }
-  }
-
-  void addPDFList() async {
-    setState(() {
-      prefs!.setStringList('pdf', pdfLists);
-    });
-  }
-
-  getPDFList() async {
-    return prefs!.getStringList('pdf');
   }
 
   /// Reads a random page of the document
@@ -192,9 +151,5 @@ class _MyAppState extends State<MyApp> {
     } else {
       _readRandomPage(factor);
     }
-  }
-
-  readBooks(String books) async {
-    _pdfDoc = await PDFDoc.fromPath(books);
   }
 }

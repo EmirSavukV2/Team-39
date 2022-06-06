@@ -6,6 +6,7 @@ import 'Screens/auth/Register/register_screen.dart';
 import 'Screens/auth/Welcome/welcome_screen.dart';
 import 'Screens/home/Book/book-detail.dart';
 import 'Screens/home/Main/main_screen.dart';
+import 'Screens/home/live_read/live_read.dart';
 import 'Screens/intro/introduction_screen.dart';
 import 'components/theme_data.dart';
 import 'constants/locale_const.dart';
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
             '/login': ((context) => const LoginScreen()),
             '/register': ((context) => const RegisterScreen()),
             '/book-detail': ((context) => const BookDetail()),
+            '/live-read': ((context) => const LiveRead()),
             '/home': ((context) => const HomeScreen()),
           },
         );
