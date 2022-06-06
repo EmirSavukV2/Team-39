@@ -44,8 +44,8 @@ flutter:
   assets:
     - assets/images/auth/welcome.png
     - assets/images/avatars/
-    - assets/translations/en-US.json
-    - assets/translations/tr-TR.json
+    - assets/images/books/
+    - assets/translations/
     - assets/splash/flutter_native_splash.yaml
 
   fonts:

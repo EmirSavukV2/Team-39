@@ -44,13 +44,13 @@ ThemeData kThemeData = ThemeData(
     ),
   ),
   textTheme: TextTheme(
-    headline1: TextStyle(
+    headline1: const TextStyle(
       color: kPrimaryColor,
       fontWeight: FontWeight.w700,
       height: 1.1,
       fontSize: 54,
     ),
-    headline2: TextStyle(
+    headline2: const TextStyle(
       color: kPrimaryColor,
       fontWeight: FontWeight.w700,
       height: 1.1,
@@ -58,16 +58,17 @@ ThemeData kThemeData = ThemeData(
     ),
     bodyText1: TextStyle(
       color: kTextColor,
+      letterSpacing: 0.2,
       fontWeight: FontWeight.w500,
       fontSize: SizerUtil.deviceType == DeviceType.mobile ? 12.sp : 12.sp,
       height: 1.4,
     ),
-    bodyText2: TextStyle(
+    bodyText2: const TextStyle(
       color: kPrimaryColor,
       fontSize: 14,
       fontWeight: FontWeight.w600,
     ),
-    caption: TextStyle(
+    caption: const TextStyle(
       color: kTextColor,
       letterSpacing: 0.4,
       fontSize: 12,

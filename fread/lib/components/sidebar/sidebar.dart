@@ -5,7 +5,64 @@ import 'package:flutter/material.dart';
 
 import 'package:fread/constants/style.dart';
 
-part 'sidebar_head.dart';
+import 'components/sidebar_footer.dart';
+import 'components/sidebar_item.dart';
+
+part 'components/sidebar_head.dart';
+
+List<Widget> sidebarItems = [
+  SidebarItem(
+    icon: Icons.notifications_none,
+    title: "Notification",
+    notify: "2",
+    onPress: () {},
+  ),
+  SidebarItem(
+    icon: Icons.bookmark_border,
+    title: "Bookmarks",
+    onPress: () {},
+  ),
+  SidebarItem(
+    icon: Icons.star_border,
+    title: "Subscription Plan",
+    onPress: () {},
+  ),
+  SidebarItem(
+    icon: Icons.settings,
+    title: "Account Settings",
+    onPress: () {},
+  ),
+  SidebarItem(
+    icon: Icons.exit_to_app,
+    title: "Log out",
+    exit: true,
+    onPress: () {
+      print("BASTIN");
+    },
+  ),
+  SizedBox(height: kDefaultPadding * 2),
+  Row(
+    mainAxisAlignment: MainAxisAlignment.spaceAround,
+    mainAxisSize: MainAxisSize.max,
+    children: [
+      SidebarFooterItem(
+        icon: Icons.menu_book_rounded,
+        title: "18 Books",
+        subtitle: "You Have",
+      ),
+      SidebarFooterItem(
+        icon: Icons.access_time,
+        title: "158 h",
+        subtitle: "of reading",
+      ),
+      SidebarFooterItem(
+        icon: Icons.task_alt,
+        title: "5 books",
+        subtitle: "done",
+      ),
+    ],
+  )
+];
 
 class Sidebar extends StatelessWidget {
   const Sidebar({Key? key}) : super(key: key);
@@ -39,165 +96,17 @@ class Sidebar extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: kDefaultPadding * 2),
-                  SidebarItem(
-                    icon: Icons.notifications_none,
-                    title: "Notification",
-                    notify: "2",
-                    onPress: () {
-                      print("BASTIN");
-                    },
+                  SizedBox(
+                    height: double.maxFinite,
+                    child: ListView.builder(
+                        itemCount: sidebarItems.length,
+                        itemBuilder: (BuildContext context, index) {
+                          return sidebarItems[index];
+                        }),
                   ),
-                  SidebarItem(
-                    icon: Icons.bookmark_border,
-                    title: "Bookmarks",
-                    onPress: () {
-                      print("BASTIN");
-                    },
-                  ),
-                  SidebarItem(
-                    icon: Icons.star_border,
-                    title: "Subscription Plan",
-                    onPress: () {
-                      print("BASTIN");
-                    },
-                  ),
-                  SidebarItem(
-                    icon: Icons.settings,
-                    title: "Account Settings",
-                    onPress: () {
-                      print("BASTIN");
-                    },
-                  ),
-                  SidebarItem(
-                    icon: Icons.exit_to_app,
-                    title: "Log out",
-                    exit: true,
-                    onPress: () {
-                      print("BASTIN");
-                    },
-                  ),
-                  SizedBox(height: kDefaultPadding),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      SidebarFooterItem(
-                        icon: Icons.menu_book_rounded,
-                        title: "18 Books",
-                        subtitle: "You Have",
-                      ),
-                      SidebarFooterItem(
-                        icon: Icons.access_time,
-                        title: "158 h",
-                        subtitle: "of reading",
-                      ),
-                      SidebarFooterItem(
-                        icon: Icons.task_alt,
-                        title: "5 books",
-                        subtitle: "done",
-                      ),
-                    ],
-                  )
                 ],
               ),
             ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class SidebarFooterItem extends StatelessWidget {
-  IconData? icon;
-
-  String title, subtitle;
-
-  SidebarFooterItem({
-    Key? key,
-    this.icon,
-    required this.title,
-    required this.subtitle,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Icon(
-          icon,
-          color: kPrimaryColor,
-          size: 28,
-        ),
-        SizedBox(height: kDefaultPadding),
-        Text(
-          title,
-          style: Theme.of(context).textTheme.bodyText2,
-        ),
-        SizedBox(height: 4),
-        Text(subtitle, style: Theme.of(context).textTheme.caption),
-      ],
-    );
-  }
-}
-
-class SidebarItem extends StatelessWidget {
-  IconData? icon;
-  String title;
-  String? notify;
-  bool exit;
-  void Function()? onPress;
-
-  SidebarItem({
-    Key? key,
-    required this.icon,
-    required this.title,
-    required this.onPress,
-    this.exit = false,
-    this.notify,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onPress,
-      child: Container(
-        padding: EdgeInsets.only(bottom: kDefaultPadding, top: kDefaultPadding),
-        decoration: BoxDecoration(
-          border: Border(
-            bottom: BorderSide(color: Colors.grey[200]!, width: 1),
-          ),
-        ),
-        child: Row(
-          children: [
-            Icon(
-              icon,
-              color: (exit) ? Colors.red : kPrimaryColor,
-            ),
-            SizedBox(width: kDefaultPadding),
-            Text(
-              title,
-              style: TextStyle(color: (exit) ? Colors.red : kPrimaryColor),
-            ),
-            Spacer(),
-            notify != null
-                ? Container(
-                    padding: const EdgeInsets.all(2.0),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16.0),
-                      color: kPrimaryColor,
-                    ),
-                    constraints: const BoxConstraints(
-                      minWidth: 18,
-                      minHeight: 18,
-                    ),
-                    child: Text(
-                      notify!,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(fontSize: 10, color: Colors.white),
-                    ),
-                  )
-                : const SizedBox.shrink()
           ],
         ),
       ),

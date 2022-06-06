@@ -1,7 +1,7 @@
 part of sidebarhead;
 
 class SidebarHead extends StatelessWidget {
-  String? image;
+  String image;
   String title, subtitle, alttitle;
   IconData? icon;
   Alignment align;
@@ -9,11 +9,10 @@ class SidebarHead extends StatelessWidget {
   void Function()? onPress;
   SidebarHead({
     Key? key,
-    this.image,
+    required this.image,
     required this.title,
     this.subtitle = "",
     this.alttitle = "",
-    this.icon,
     required this.gColors,
     this.onPress,
     this.align = Alignment.center,
@@ -43,16 +42,10 @@ class SidebarHead extends StatelessWidget {
               child: InkWell(
                 onTap: onPress,
                 borderRadius: const BorderRadius.all(Radius.circular(1000)),
-                child: (image == null)
-                    ? Icon(
-                        icon,
-                        size: 32,
-                        color: kPrimaryColor,
-                      )
-                    : Image.asset(
-                        image!,
-                        alignment: align,
-                      ),
+                child: Image.asset(
+                  image,
+                  alignment: align,
+                ),
               ),
             ),
           ),
@@ -60,7 +53,7 @@ class SidebarHead extends StatelessWidget {
         SizedBox(height: kDefaultPadding),
         AutoSizeText(
           title,
-          style: Theme.of(context).textTheme.headline2,
+          style: Theme.of(context).textTheme.headline2!.copyWith(fontSize: 34),
           maxLines: 1,
         ),
         SizedBox(height: kDefaultPadding / 2),
