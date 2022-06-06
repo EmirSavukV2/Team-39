@@ -1,11 +1,13 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fread/constants/style.dart';
+import 'package:introduction_screen/introduction_screen.dart';
 import 'package:sizer/sizer.dart';
 import 'Screens/auth/Login/login_screen.dart';
 import 'Screens/auth/Register/register_screen.dart';
 import 'Screens/auth/Welcome/welcome_screen.dart';
 import 'Screens/home/Main/main_screen.dart';
+import 'Screens/intro/introduction_screen.dart';
 import 'components/theme_data.dart';
 import 'constants/locale_const.dart';
 
@@ -37,6 +39,10 @@ class MyApp extends StatelessWidget {
           localizationsDelegates: context.localizationDelegates,
           locale: LocaleConstants.TR_LOCALE,
           routes: {
+<<<<<<< Updated upstream
+=======
+            '/': ((context) => IntroScreen()),
+>>>>>>> Stashed changes
             '/welcome': ((context) => const WelcomeScreen()),
             '/login': ((context) => const LoginScreen()),
             '/register': ((context) => const RegisterScreen()),
