@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'demo/live_read.dart';
 import 'screens/login.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: "FRead App",
       theme: ThemeData.dark(),
-      home: Login(),
+      home: LiveRead(),
     );
   }
 }

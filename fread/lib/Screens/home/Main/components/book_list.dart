@@ -12,7 +12,16 @@ class BookBuilder extends StatelessWidget {
         imageUrl: "assets/images/books/killingsong.jpg",
         color: Colors.orange[900]!,
         onPress: () {
-          Navigator.pushNamed(context, '/book-detail');
+          Navigator.pushNamed(context, '/book-detail', arguments: {
+            "title": "Sherlock HOLMES Tanık",
+            "author": "Sir Arthur Conan Doyle",
+            "page": "254",
+            "lang": "TR",
+            "rate": "4.5",
+            "intro": "Inro Text",
+            "image": "assets/images/books/sherlock.jpg",
+            "pdf": "assets/book/nur.pdf"
+          });
         },
       ),
       BookList(

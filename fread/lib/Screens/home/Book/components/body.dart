@@ -2,7 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:fread/constants/style.dart';
 
 class Body extends StatelessWidget {
-  const Body({Key? key}) : super(key: key);
+  final String title, author, page, lang, rate, intro, image, pdf;
+
+  const Body({
+    Key? key,
+    required this.title,
+    required this.author,
+    required this.page,
+    required this.lang,
+    required this.rate,
+    required this.intro,
+    required this.image,
+    required this.pdf,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +34,13 @@ class Body extends StatelessWidget {
                   ),
                   SizedBox(height: size.height * 0.23),
                   Text(
-                    "Sherlock HOLMES Tanık",
+                    title,
                     style: Theme.of(context).textTheme.bodyText2!.copyWith(
                           fontSize: 24,
                         ),
                   ),
                   Text(
-                    "Sır Arthur Conan Doyle",
+                    author,
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
                   Padding(
@@ -44,7 +56,7 @@ class Body extends StatelessWidget {
                         children: [
                           RichText(
                             text: TextSpan(
-                              text: '252 ',
+                              text: page,
                               style: Theme.of(context)
                                   .textTheme
                                   .bodyText2!
@@ -62,7 +74,7 @@ class Body extends StatelessWidget {
                           SizedBox(width: kDefaultPadding),
                           RichText(
                             text: TextSpan(
-                              text: 'Eng ',
+                              text: lang,
                               style: Theme.of(context)
                                   .textTheme
                                   .bodyText2!
@@ -80,7 +92,7 @@ class Body extends StatelessWidget {
                           SizedBox(width: kDefaultPadding),
                           RichText(
                             text: TextSpan(
-                              text: '4.5',
+                              text: rate,
                               style: Theme.of(context)
                                   .textTheme
                                   .bodyText2!
@@ -120,7 +132,7 @@ class Body extends StatelessWidget {
                         right: kDefaultPadding,
                         bottom: kDefaultPadding),
                     child: Text(
-                      "Adipisicing minim voluptate voluptate eu adipisicing cupidatat. Ex cupidatat laborum aliqua irure laborum. In qui et occaecat nisi anim non in velitAdipisicing minim voluptate voluptate eu adipisicing cupidatat. Ex cupidatat laborum aliqua irure laborum. In qui et occaecat nisi anim non in velit.",
+                      intro,
                       style: Theme.of(context)
                           .textTheme
                           .bodyText1!
@@ -151,7 +163,7 @@ class Body extends StatelessWidget {
                     ],
                   ),
                   child: Image.asset(
-                    "assets/images/books/sherlock.jpg",
+                    image,
                     height: size.height * 0.35,
                   ),
                 ),
