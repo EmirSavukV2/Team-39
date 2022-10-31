@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants/style.dart';
+import '../../../../constants/style.dart';
 
 class SidebarItem extends StatelessWidget {
   IconData? icon;

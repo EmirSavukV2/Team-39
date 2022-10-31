@@ -1,7 +1,9 @@
 library sidebarhead;
 
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fread/Services/auth.services.dart';
 
 import 'package:fread/constants/style.dart';
 
@@ -37,7 +39,7 @@ List<Widget> sidebarItems = [
     title: "Log out",
     exit: true,
     onPress: () {
-      print("BASTIN");
+      AuthServices.instance.signOut();
     },
   ),
   SizedBox(height: kDefaultPadding * 2),
@@ -69,6 +71,8 @@ class Sidebar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    User? user = AuthServices.instance.getCurrentUser();
+
     return Drawer(
       backgroundColor: Colors.white,
       child: SingleChildScrollView(
@@ -85,7 +89,7 @@ class Sidebar extends StatelessWidget {
               child: Column(
                 children: [
                   SidebarHead(
-                    title: "Emir SAVUK",
+                    title: "${user?.displayName}",
                     subtitle: "You're rock",
                     alttitle: "You've finished last book in 3 days",
                     image: "assets/images/avatars/avataaars.png",

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fread/constants/style.dart';
 
-import '../../../components/sidebar/sidebar.dart';
+import '../../components/sidebar/sidebar.dart';
 import 'components/body.dart';
 
 class BookDetail extends StatefulWidget {

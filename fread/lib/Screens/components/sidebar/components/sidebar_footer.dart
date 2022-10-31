@@ -1,6 +1,8 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 
-import '../../../constants/style.dart';
+import '../../../../constants/style.dart';
 
 class SidebarFooterItem extends StatelessWidget {
   IconData? icon;
@@ -28,7 +30,7 @@ class SidebarFooterItem extends StatelessWidget {
           title,
           style: Theme.of(context).textTheme.bodyText2,
         ),
-        SizedBox(height: 4),
+        const SizedBox(height: 4),
         Text(subtitle, style: Theme.of(context).textTheme.caption),
       ],
     );

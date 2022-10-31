@@ -1,5 +1,8 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:fread/splash_screen.dart';
+import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'Screens/auth/Login/login_screen.dart';
 import 'Screens/auth/Register/register_screen.dart';
@@ -8,12 +11,17 @@ import 'Screens/home/Book/book-detail.dart';
 import 'Screens/home/Main/main_screen.dart';
 import 'Screens/home/live_read/live_read.dart';
 import 'Screens/intro/introduction_screen.dart';
-import 'components/theme_data.dart';
+import 'Screens/components/theme_data.dart';
 import 'constants/locale_const.dart';
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(
     EasyLocalization(
       supportedLocales: LocaleConstants.SUPPORTED_LOCALE,
@@ -31,15 +39,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Sizer(
       builder: (context, orientation, deviceType) {
-        return MaterialApp(
+        return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'FRead ',
           theme: kThemeData,
           supportedLocales: LocaleConstants.SUPPORTED_LOCALE,
           localizationsDelegates: context.localizationDelegates,
-          locale: LocaleConstants.TR_LOCALE,
+          locale: Get.deviceLocale,
+          initialRoute: "/",
           routes: {
-            '/': ((context) => const IntroScreen()),
+            "/": (context) => SplashScreenPage(),
+            '/intro': ((context) => const IntroScreen()),
             '/welcome': ((context) => const WelcomeScreen()),
             '/login': ((context) => const LoginScreen()),
             '/register': ((context) => const RegisterScreen()),

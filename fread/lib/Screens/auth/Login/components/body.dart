@@ -1,8 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:fread/Services/auth.services.dart';
 import 'package:fread/constants/style.dart';
-import 'package:sizer/sizer.dart';
 
 import '../../components/input_field.dart';
 
@@ -72,7 +72,12 @@ class _BodyState extends State<Body> {
             crossAxisAlignment: WrapCrossAlignment.center,
             children: [
               ElevatedButton(
-                onPressed: signIn,
+                onPressed: () async {
+                  await AuthServices().signIn(
+                    email: emailController.text,
+                    password: passwordController.text,
+                  );
+                },
                 child: Text("auth.login.login".tr()),
               ),
               SizedBox(height: kDefaultPadding * 2),

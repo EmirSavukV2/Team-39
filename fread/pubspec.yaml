@@ -13,6 +13,9 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
+  # State Managment
+  shared_preferences: ^2.0.15
+  get: ^4.6.5
 
   # Text
   auto_size_text: ^3.0.0
@@ -22,11 +25,18 @@ dependencies:
   # Splash Screen
   introduction_screen: ^3.0.2
   flutter_native_splash: ^2.2.2
-  #PDF
+
+  # PDF
   pdf_text: ^0.5.0
   open_file: ^3.2.1
+
+  # Front
+  fluttertoast: ^8.1.1
+
   #firabase
-  
+  firebase_auth: ^4.1.0
+  firebase_database: ^10.0.3
+
 flutter_native_splash:
   color: "#ffffff"
   image: "assets/splash/splash_400.png"

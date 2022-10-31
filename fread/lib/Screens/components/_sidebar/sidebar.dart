@@ -3,7 +3,7 @@ library sidebar;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:fread/constants/style.dart';
-part './sidebar_item.dart';
+part 'sidebar_item.dart';
 
 class SideBar extends StatelessWidget {
   SideBar({

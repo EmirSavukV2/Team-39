@@ -1,8 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:fread/Services/auth.services.dart';
 import 'package:fread/constants/style.dart';
-import 'package:sizer/sizer.dart';
 
 import '../../components/input_field.dart';
 
@@ -15,11 +15,15 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
   DateTime selectedDate = DateTime.now();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  final nameController = TextEditingController();
+  final surnameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return Container(
+    return SizedBox(
       height: size.height * 1,
       width: double.infinity,
       child: SingleChildScrollView(
@@ -56,14 +60,14 @@ class _BodyState extends State<Body> {
                   Expanded(
                     child: LoginInputField(
                       hintText: "auth.register.name".tr(),
-                      inputController: TextEditingController(),
+                      inputController: nameController,
                     ),
                   ),
                   SizedBox(width: kDefaultPadding),
                   Expanded(
                     child: LoginInputField(
                       hintText: "auth.register.surname".tr(),
-                      inputController: TextEditingController(),
+                      inputController: surnameController,
                     ),
                   )
                 ],
@@ -71,7 +75,7 @@ class _BodyState extends State<Body> {
               SizedBox(height: kDefaultPadding / 2),
               LoginInputField(
                 hintText: "auth.register.mail".tr(),
-                inputController: TextEditingController(),
+                inputController: emailController,
               ),
               SizedBox(height: kDefaultPadding / 2),
               GestureDetector(
@@ -90,7 +94,7 @@ class _BodyState extends State<Body> {
               SizedBox(height: kDefaultPadding / 2),
               PasswordInput(
                 hintText: "auth.register.password".tr(),
-                textEditingController: TextEditingController(),
+                textEditingController: passwordController,
               ),
               SizedBox(height: kDefaultPadding / 2),
               PasswordInput(
@@ -104,8 +108,13 @@ class _BodyState extends State<Body> {
                 crossAxisAlignment: WrapCrossAlignment.center,
                 children: [
                   ElevatedButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/home');
+                    onPressed: () async {
+                      await AuthServices().signUp(
+                        email: emailController.text,
+                        password: passwordController.text,
+                        displayName:
+                            "${nameController.text} ${surnameController.text}",
+                      );
                     },
                     child: Text("auth.register.registerButton".tr()),
                   ),
@@ -142,7 +151,8 @@ class _BodyState extends State<Body> {
       firstDate: DateTime(1960),
       lastDate: DateTime(2023, 1, 1),
     );
-    if (selected != null && selected != selectedDate)
+    if (selected != null && selected != selectedDate) {
       setState(() => selectedDate = selected);
+    }
   }
 }

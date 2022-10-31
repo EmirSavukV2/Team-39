@@ -12,11 +12,11 @@ class LoginScreen extends StatelessWidget {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          leading: BackButton(
+          leading: const BackButton(
             color: kPrimaryColor,
           ),
         ),
-        body: Body(),
+        body: const Body(),
       ),
     );
   }

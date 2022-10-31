@@ -1,5 +1,6 @@
 part of sidebarhead;
 
+// ignore: must_be_immutable
 class SidebarHead extends StatelessWidget {
   String image;
   String title, subtitle, alttitle;

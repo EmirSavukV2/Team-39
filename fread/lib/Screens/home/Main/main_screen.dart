@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fread/Services/auth.services.dart';
 import 'package:fread/constants/style.dart';
 
-import '../../../components/sidebar/sidebar.dart';
+import '../../components/sidebar/sidebar.dart';
 import 'components/body.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -12,15 +14,24 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  User? user = AuthServices.instance.getCurrentUser();
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
+    print(user);
     final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
     return SafeArea(
       child: Scaffold(
         key: scaffoldKey,
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          title: const Text("Anasayfa"),
+          // Get user name from firebase
+          title: Text("${user?.displayName}"),
           iconTheme: const IconThemeData(color: kPrimaryColor),
           leading: IconButton(
               onPressed: () => scaffoldKey.currentState?.openDrawer(),

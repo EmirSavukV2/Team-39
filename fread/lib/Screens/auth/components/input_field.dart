@@ -14,7 +14,7 @@ class LoginInputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Color primaryColor = Colors.black;
-    return TextField(
+    return TextFormField(
       enabled: enabled,
       controller: inputController,
       onChanged: (value) {
@@ -94,7 +94,7 @@ class _PasswordInputState extends State<PasswordInput> {
               BorderSide(color: primaryColor.withOpacity(.15), width: 2.0),
         ),
         focusedErrorBorder: OutlineInputBorder(
-          borderSide: BorderSide(
+          borderSide: const BorderSide(
             color: Colors.red,
             width: 1,
           ),
