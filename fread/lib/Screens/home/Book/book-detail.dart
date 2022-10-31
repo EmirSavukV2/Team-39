@@ -19,6 +19,12 @@ class _BookDetailState extends State<BookDetail> {
     Map arguments = ModalRoute.of(context)?.settings.arguments as Map;
 
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: Icon(Icons.chrome_reader_mode_outlined),
+      ),
       body: Body(
         title: arguments['title'].toString(),
         author: arguments['author'].toString(),

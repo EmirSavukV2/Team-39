@@ -14,6 +14,8 @@ import 'package:flutter/services.dart';
 import 'Services/auth.services.dart';
 
 class SplashScreenPage extends StatefulWidget {
+  const SplashScreenPage({super.key});
+
   @override
   _SplashScreenPageState createState() => _SplashScreenPageState();
 }
@@ -23,7 +25,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   int _second = 2; // set timer for 3 second and then direct to next page
 
   void _startTimer() {
-    const period = const Duration(seconds: 1);
+    const period = Duration(seconds: 1);
     _timer = Timer.periodic(period, (timer) {
       setState(() {
         _second--;
