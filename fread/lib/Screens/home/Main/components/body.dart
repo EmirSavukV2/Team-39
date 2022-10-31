@@ -38,7 +38,8 @@ class _BodyState extends State<Body> {
               title: "Recently added",
               view: "View all",
             ),
-            BookBuilder(),
+            // const BookBuilder(),
+            const DemoBookBuilder(),
             SizedBox(height: kDefaultPadding),
             const LayoutHeader(
               title: "Top Fast User",

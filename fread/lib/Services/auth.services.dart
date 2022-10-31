@@ -52,7 +52,6 @@ class AuthServices {
       Fluttertoast.showToast(
           msg: e.message.toString(), toastLength: Toast.LENGTH_LONG);
     } catch (e) {
-      print(e.toString());
       Fluttertoast.showToast(msg: e.toString(), toastLength: Toast.LENGTH_LONG);
     }
   }
