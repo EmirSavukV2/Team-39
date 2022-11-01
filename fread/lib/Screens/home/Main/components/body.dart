@@ -39,7 +39,7 @@ class _BodyState extends State<Body> {
               view: "View all",
             ),
             // const BookBuilder(),
-            const DemoBookBuilder(),
+            DemoBookBuilder(),
             SizedBox(height: kDefaultPadding),
             const LayoutHeader(
               title: "Top Fast User",
