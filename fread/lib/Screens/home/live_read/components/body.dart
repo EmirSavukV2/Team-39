@@ -32,17 +32,9 @@ class _BodyState extends State<Body> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Align(
-            alignment: Alignment.topCenter,
-            child: ElevatedButton(
-                onPressed: () {
-                  // _pdfViewerKey.currentState?.openBookmarkView();
-                },
-                child: Text("Open PDF")),
-          ),
           Container(
             width: size.width - 20,
-            height: (size.width - 20) * 1.414,
+            height: size.height * 1 - 90,
             child: SfPdfViewer.network(
               widget.books.fileUrl!,
               key: _pdfViewerKey,

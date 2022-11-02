@@ -15,6 +15,8 @@ class Body extends StatelessWidget {
     return Container(
         width: double.infinity,
         height: size.height * 1,
+        padding:
+            EdgeInsets.only(left: safePadding.left, right: safePadding.right),
         child: SingleChildScrollView(
           child: Stack(
             children: [
@@ -27,6 +29,7 @@ class Body extends StatelessWidget {
                   SizedBox(height: size.height * 0.23),
                   Text(
                     books.name!,
+                    textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyText2!.copyWith(
                           fontSize: 24,
                         ),

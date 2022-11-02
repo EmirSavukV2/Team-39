@@ -21,12 +21,6 @@ class BookDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.pop(context);
-        },
-        child: Icon(Icons.chrome_reader_mode_outlined),
-      ),
       body: books != null
           ? Body(books: books!)
           : const Center(

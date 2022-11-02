@@ -7,14 +7,38 @@ import 'package:flutter/material.dart';
 import 'package:fread/Model/book_model.dart';
 import 'package:fread/Screens/home/Book/book_detail.dart';
 import 'package:get/get.dart' hide Trans;
+import 'package:palette_generator/palette_generator.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../../../../constants/style.dart';
 
-class DemoBookBuilder extends StatelessWidget {
-  DemoBookBuilder({super.key});
+class DemoBookBuilder extends StatefulWidget {
+  const DemoBookBuilder({super.key});
+
+  @override
+  State<DemoBookBuilder> createState() => _DemoBookBuilderState();
+}
+
+class _DemoBookBuilderState extends State<DemoBookBuilder> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  _updatePalettes(String imageUrl) async {
+    final PaletteGenerator generator =
+        (await PaletteGenerator.fromImageProvider(
+      NetworkImage(imageUrl),
+      size: const Size(100, 100),
+    ));
+    List colors = generator.colors.toList();
+    print("Color bu la $colors");
+    return colors[0] as Color?;
+  }
+
   final Stream<QuerySnapshot> _booksStream =
       FirebaseFirestore.instance.collection('books').snapshots();
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -43,13 +67,27 @@ class DemoBookBuilder extends StatelessWidget {
                 final books = Books.fromJson(json);
                 return Padding(
                   padding: EdgeInsets.only(right: kDefaultPadding),
-                  child: BookList(
-                    imageUrl: books.thumbnail!,
-                    color: Colors.red[200],
-                    onPress: () => Get.to(
-                      BookDetail(books: books),
-                    ),
-                  ),
+                  child: FutureBuilder(
+                      future: _updatePalettes(books.thumbnail!),
+                      builder: (context, snapshot) {
+                        if (snapshot.hasData) {
+                          return BookList(
+                            imageUrl: books.thumbnail!,
+                            color: snapshot.data as Color?,
+                            onPress: () => Get.to(
+                              BookDetail(books: books),
+                            ),
+                          );
+                        } else {
+                          return BookList(
+                            imageUrl: books.thumbnail!,
+                            color: Colors.white,
+                            onPress: () => Get.to(
+                              BookDetail(books: books),
+                            ),
+                          );
+                        }
+                      }),
                 );
               }).toList(),
             ),
@@ -102,14 +140,10 @@ class BookList extends StatelessWidget {
   }
 
   Widget loadShimmer() {
-    return SizedBox(
-      width: 200.0,
-      height: 100.0,
-      child: Shimmer.fromColors(
-        baseColor: Colors.red,
-        highlightColor: Colors.yellow,
-        child: SizedBox(width: 200, height: 100),
-      ),
+    return Shimmer.fromColors(
+      baseColor: Colors.red,
+      highlightColor: Colors.yellow,
+      child: const SizedBox(width: 114, height: 100),
     );
   }
 }

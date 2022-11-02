@@ -94,8 +94,9 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
       },
       child: Container(
         child: Center(
-          child: FlutterLogo(
-            size: MediaQuery.of(context).size.width / 2,
+          child: Image.asset(
+            "assets/icon/icon.png",
+            width: MediaQuery.of(context).size.width / 2,
           ),
         ),
       ),
