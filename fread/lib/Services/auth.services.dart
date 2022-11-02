@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:get/get.dart';
+import 'package:get/get.dart' hide Trans;
 
 /// AuthServices class singleton class
 class AuthServices {
@@ -25,7 +25,7 @@ class AuthServices {
     User? user = _auth.currentUser;
     if (user != null) {
       Get.back();
-      Get.toNamed('/home');
+      Get.offAllNamed('/home');
     }
   }
 

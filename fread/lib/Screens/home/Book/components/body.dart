@@ -1,19 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:fread/constants/style.dart';
+part of '../book_detail.dart';
 
 class Body extends StatelessWidget {
-  final String title, author, page, lang, rate, intro, image, pdf;
+  Books books;
 
-  const Body({
+  Body({
     Key? key,
-    required this.title,
-    required this.author,
-    required this.page,
-    required this.lang,
-    required this.rate,
-    required this.intro,
-    required this.image,
-    required this.pdf,
+    required this.books,
   }) : super(key: key);
 
   @override
@@ -30,17 +22,17 @@ class Body extends StatelessWidget {
                 children: [
                   Container(
                     height: size.height * 0.3,
-                    decoration: BoxDecoration(color: Color(0xff718A7D)),
+                    decoration: const BoxDecoration(color: Color(0xff718A7D)),
                   ),
                   SizedBox(height: size.height * 0.23),
                   Text(
-                    title,
+                    books.name!,
                     style: Theme.of(context).textTheme.bodyText2!.copyWith(
                           fontSize: 24,
                         ),
                   ),
                   Text(
-                    author,
+                    books.author!,
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
                   Padding(
@@ -50,13 +42,13 @@ class Body extends StatelessWidget {
                           EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(24),
-                          color: Color(0xffF5F5F5)),
+                          color: const Color(0xffF5F5F5)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           RichText(
                             text: TextSpan(
-                              text: page,
+                              text: books.numberOfPages.toString(),
                               style: Theme.of(context)
                                   .textTheme
                                   .bodyText2!
@@ -74,7 +66,7 @@ class Body extends StatelessWidget {
                           SizedBox(width: kDefaultPadding),
                           RichText(
                             text: TextSpan(
-                              text: lang,
+                              text: books.lang,
                               style: Theme.of(context)
                                   .textTheme
                                   .bodyText2!
@@ -92,7 +84,7 @@ class Body extends StatelessWidget {
                           SizedBox(width: kDefaultPadding),
                           RichText(
                             text: TextSpan(
-                              text: rate,
+                              text: books.rate?.toStringAsPrecision(2),
                               style: Theme.of(context)
                                   .textTheme
                                   .bodyText2!
@@ -132,7 +124,7 @@ class Body extends StatelessWidget {
                         right: kDefaultPadding,
                         bottom: kDefaultPadding),
                     child: Text(
-                      intro,
+                      books.description!,
                       style: Theme.of(context)
                           .textTheme
                           .bodyText1!
@@ -142,12 +134,11 @@ class Body extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.all(kDefaultPadding),
                     child: ElevatedButton(
-                      child: Text("Countinue Reading"),
+                      child: const Text("Countinue Reading"),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/live-read', arguments: {
-                          "title": title,
-                          "pdf": pdf,
-                        });
+                        Get.to(LiveRead(
+                          books: books,
+                        ));
                       },
                     ),
                   ),
@@ -163,12 +154,16 @@ class Body extends StatelessWidget {
                         color: Colors.black.withOpacity(0.2),
                         blurRadius: 24,
                         spreadRadius: 2,
-                        offset: Offset(0, 20),
+                        offset: const Offset(0, 20),
                       ),
                     ],
                   ),
-                  child: Image.asset(
-                    image,
+                  child: CachedNetworkImage(
+                    imageUrl: books.thumbnail!,
+                    placeholder: (context, url) => loadShimmer(),
+                    errorWidget: (context, url, error) =>
+                        const Icon(Icons.error),
+                    fit: BoxFit.contain,
                     height: size.height * 0.35,
                   ),
                 ),
@@ -181,14 +176,26 @@ class Body extends StatelessWidget {
                           left: kDefaultPadding, top: kDefaultPadding),
                   child: Container(
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(4, 0, 0, 0).withOpacity(.5),
+                        color: const Color.fromARGB(4, 0, 0, 0).withOpacity(.5),
                         borderRadius: BorderRadius.circular(50),
                       ),
-                      child: BackButton(color: Colors.white)),
+                      child: const BackButton(color: Colors.white)),
                 ),
               ),
             ],
           ),
         ));
+  }
+
+  Widget loadShimmer() {
+    return SizedBox(
+      width: 200.0,
+      height: 100.0,
+      child: Shimmer.fromColors(
+        baseColor: Colors.red,
+        highlightColor: Colors.yellow,
+        child: const SizedBox(width: 200, height: 100),
+      ),
+    );
   }
 }

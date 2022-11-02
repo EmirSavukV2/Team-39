@@ -1,15 +1,14 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:fread/Model/book_model.dart';
 import 'package:pdf_text/pdf_text.dart';
 
 class Body extends StatefulWidget {
-  final String bookName, pdf;
+  final Books books;
   const Body({
     Key? key,
-    required this.bookName,
-    required this.pdf,
+    required this.books,
   }) : super(key: key);
   @override
   State<Body> createState() => _BodyState();
@@ -35,7 +34,7 @@ class _BodyState extends State<Body> {
           children: [
             Center(
               child: Text(
-                _text,
+                widget.books.name!,
                 maxLines: 1,
                 style: Theme.of(context)
                     .textTheme
@@ -54,7 +53,7 @@ class _BodyState extends State<Body> {
                     IconButton(
                       alignment: Alignment.topCenter,
                       onPressed: () {
-                        print(widget.pdf);
+                        // print(widget.pdf);
                       },
                       icon: Icon(
                         Icons.minimize,
@@ -80,7 +79,7 @@ class _BodyState extends State<Body> {
                 onPressed: () {
                   setState(() {
                     _startOrStop();
-                    print(widget.pdf);
+                    // print(widget.pdf);
                     if (!first) {
                       pickPDFText();
                       first = true;
@@ -106,8 +105,8 @@ class _BodyState extends State<Body> {
 
   /// Picks a new PDF document from the device
   Future pickPDFText() async {
-    File asd = File(widget.pdf);
-    var _pdfDoc = await PDFDoc.fromFile(asd);
+    // File asd = File(widget.pdf);
+    // var _pdfDoc = await PDFDoc.fromFile(asd);
 
     setState(() {});
   }

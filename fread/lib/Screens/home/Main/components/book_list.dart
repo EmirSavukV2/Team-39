@@ -1,9 +1,13 @@
 import 'dart:math';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:fread/Model/book_model.dart';
+import 'package:fread/Screens/home/Book/book_detail.dart';
+import 'package:get/get.dart' hide Trans;
+import 'package:shimmer/shimmer.dart';
 
 import '../../../../constants/style.dart';
 
@@ -21,7 +25,7 @@ class DemoBookBuilder extends StatelessWidget {
         builder:
             (BuildContext? context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (snapshot.hasError) {
-            return Text('Something went wrong');
+            return const Text('Something went wrong');
           }
 
           if (snapshot.connectionState == ConnectionState.waiting) {
@@ -40,7 +44,12 @@ class DemoBookBuilder extends StatelessWidget {
                 return Padding(
                   padding: EdgeInsets.only(right: kDefaultPadding),
                   child: BookList(
-                      imageUrl: books.thumbnail!, color: Colors.red[200]),
+                    imageUrl: books.thumbnail!,
+                    color: Colors.red[200],
+                    onPress: () => Get.to(
+                      BookDetail(books: books),
+                    ),
+                  ),
                 );
               }).toList(),
             ),
@@ -81,11 +90,25 @@ class BookList extends StatelessWidget {
             borderRadius: BorderRadius.circular(15)),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(12.5),
-          child: Image.network(
-            imageUrl,
+          child: CachedNetworkImage(
+            imageUrl: imageUrl,
+            placeholder: (context, url) => loadShimmer(),
+            errorWidget: (context, url, error) => const Icon(Icons.error),
             fit: BoxFit.contain,
           ),
         ),
+      ),
+    );
+  }
+
+  Widget loadShimmer() {
+    return SizedBox(
+      width: 200.0,
+      height: 100.0,
+      child: Shimmer.fromColors(
+        baseColor: Colors.red,
+        highlightColor: Colors.yellow,
+        child: SizedBox(width: 200, height: 100),
       ),
     );
   }

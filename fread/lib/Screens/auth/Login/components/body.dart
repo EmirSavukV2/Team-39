@@ -1,8 +1,9 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fread/Services/auth.services.dart';
 import 'package:fread/constants/style.dart';
+import 'package:get/get.dart' hide Trans;
+import 'package:easy_localization/easy_localization.dart';
 
 import '../../components/input_field.dart';
 
@@ -88,7 +89,7 @@ class _BodyState extends State<Body> {
               ),
               TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/login');
+                  Get.toNamed('/login');
                 },
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.symmetric(vertical: kDefaultPadding),
@@ -102,18 +103,5 @@ class _BodyState extends State<Body> {
         ],
       ),
     );
-  }
-
-  Future signIn() async {
-    if (emailController.text.trim() == "emirsvk55@gmail.com" &&
-        passwordController.text.trim() == "18502000") {
-      Navigator.pushNamed(context, '/home');
-    } else {
-      final snackBar = SnackBar(
-        content: const Text('Wrong email or password '),
-        action: SnackBarAction(label: 'Undo', onPressed: () {}),
-      );
-      ScaffoldMessenger.of(context).showSnackBar(snackBar);
-    }
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fread/constants/style.dart';
+import 'package:get/get.dart' hide Trans;
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -16,7 +17,7 @@ class _IntroScreenState extends State<IntroScreen> {
   void _onIntroEnd(context) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('isFirstStart', true);
-    Navigator.pushNamed(context, '/welcome');
+    Get.toNamed('/welcome');
   }
 
   Widget _buildImage(String assetName, [double width = 300]) {

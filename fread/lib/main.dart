@@ -2,12 +2,12 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fread/splash_screen.dart';
-import 'package:get/get.dart';
+import 'package:get/get.dart' hide Trans;
 import 'package:sizer/sizer.dart';
 import 'Screens/auth/Login/login_screen.dart';
 import 'Screens/auth/Register/register_screen.dart';
 import 'Screens/auth/Welcome/welcome_screen.dart';
-import 'Screens/home/Book/book-detail.dart';
+import 'Screens/home/Book/book_detail.dart';
 import 'Screens/home/Main/main_screen.dart';
 import 'Screens/home/live_read/live_read.dart';
 import 'Screens/intro/introduction_screen.dart';
@@ -48,12 +48,12 @@ class MyApp extends StatelessWidget {
           locale: Get.deviceLocale,
           initialRoute: "/",
           routes: {
-            "/": (context) => SplashScreenPage(),
+            "/": (context) => const SplashScreenPage(),
             '/intro': ((context) => const IntroScreen()),
             '/welcome': ((context) => const WelcomeScreen()),
             '/login': ((context) => const LoginScreen()),
             '/register': ((context) => const RegisterScreen()),
-            '/book-detail': ((context) => const BookDetail()),
+            '/book-detail': ((context) => BookDetail()),
             '/live-read': ((context) => const LiveRead()),
             '/home': ((context) => const HomeScreen()),
           },

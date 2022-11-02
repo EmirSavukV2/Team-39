@@ -4,7 +4,7 @@ Don't forget to add all images and sound used in this pages at the pubspec.yaml
  */
 
 import 'dart:async';
-import 'package:get/get.dart';
+import 'package:get/get.dart' hide Trans;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:universal_io/io.dart';
 
