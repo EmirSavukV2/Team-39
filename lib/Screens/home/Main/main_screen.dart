@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fread/Screens/components/_sidebar/sidebar.dart';
 import 'package:fread/Services/auth.services.dart';
 import 'package:fread/constants/style.dart';
 
@@ -36,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: () => scaffoldKey.currentState?.openDrawer(),
               icon: const Icon(Icons.menu)),
         ),
-        drawer: const Sidebar(),
+        drawer: Sidebar(),
         body: const Body(),
       ),
     );

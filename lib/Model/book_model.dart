@@ -11,18 +11,19 @@ class Books {
   double? rate;
   String? thumbnail;
 
-  Books(
-      {this.author,
-      this.description,
-      this.fileUrl,
-      this.lang,
-      this.name,
-      this.numberOfPages,
-      this.publisher,
-      this.year,
-      this.category,
-      this.rate,
-      this.thumbnail});
+  Books({
+    this.author,
+    this.description,
+    this.fileUrl,
+    this.lang,
+    this.name,
+    this.numberOfPages,
+    this.publisher,
+    this.year,
+    this.category,
+    this.rate,
+    this.thumbnail,
+  });
 
   Books.fromJson(Map<String, dynamic> json) {
     name = json['name'];

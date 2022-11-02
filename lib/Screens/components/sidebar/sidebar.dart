@@ -10,7 +10,7 @@ import 'package:fread/constants/style.dart';
 import 'components/sidebar_footer.dart';
 import 'components/sidebar_item.dart';
 
-part 'components/sidebar_head.dart';
+part '../sidebar/components/sidebar_head.dart';
 
 List<Widget> sidebarItems = [
   SidebarItem(

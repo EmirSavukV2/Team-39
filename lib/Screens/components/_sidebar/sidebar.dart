@@ -3,7 +3,7 @@ library sidebar;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:fread/constants/style.dart';
-part 'sidebar_item.dart';
+part '../_sidebar/sidebar_item.dart';
 
 class SideBar extends StatelessWidget {
   SideBar({
@@ -43,6 +43,71 @@ class SideBar extends StatelessWidget {
       gColors: const [
         Color(0xffFEECE8),
         Color(0xffF6F4F0),
+      ],
+    ),
+    SidebarItem(
+      icon: Icons.bookmark_border,
+      align: Alignment.bottomCenter,
+      title: "Test",
+      subtitle: "off",
+      onPress: () {
+        print("");
+      },
+      gColors: const [
+        Color(0xffF4F2EE),
+        Color(0xffE2EFF3),
+      ],
+    ),
+    SidebarItem(
+      icon: Icons.bookmark_border,
+      align: Alignment.bottomCenter,
+      title: "Test",
+      subtitle: "off",
+      onPress: () {
+        print("");
+      },
+      gColors: const [
+        Color(0xffF4F2EE),
+        Color(0xffE2EFF3),
+      ],
+    ),
+    SidebarItem(
+      icon: Icons.bookmark_border,
+      align: Alignment.bottomCenter,
+      title: "Test",
+      subtitle: "off",
+      onPress: () {
+        print("");
+      },
+      gColors: const [
+        Color(0xffF4F2EE),
+        Color(0xffE2EFF3),
+      ],
+    ),
+    SidebarItem(
+      icon: Icons.bookmark_border,
+      align: Alignment.bottomCenter,
+      title: "Test",
+      subtitle: "off",
+      onPress: () {
+        print("");
+      },
+      gColors: const [
+        Color(0xffF4F2EE),
+        Color(0xffE2EFF3),
+      ],
+    ),
+    SidebarItem(
+      icon: Icons.bookmark_border,
+      align: Alignment.bottomCenter,
+      title: "Test",
+      subtitle: "off",
+      onPress: () {
+        print("");
+      },
+      gColors: const [
+        Color(0xffF4F2EE),
+        Color(0xffE2EFF3),
       ],
     ),
     SidebarItem(

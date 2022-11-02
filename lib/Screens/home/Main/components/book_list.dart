@@ -1,14 +1,11 @@
-import 'dart:math';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart' hide Trans;
+import 'package:shimmer/shimmer.dart';
+
 import 'package:fread/Model/book_model.dart';
 import 'package:fread/Screens/home/Book/book_detail.dart';
-import 'package:get/get.dart' hide Trans;
-import 'package:palette_generator/palette_generator.dart';
-import 'package:shimmer/shimmer.dart';
 
 import '../../../../constants/style.dart';
 
@@ -25,16 +22,18 @@ class _DemoBookBuilderState extends State<DemoBookBuilder> {
     super.initState();
   }
 
-  _updatePalettes(String imageUrl) async {
-    final PaletteGenerator generator =
-        (await PaletteGenerator.fromImageProvider(
-      NetworkImage(imageUrl),
-      size: const Size(100, 100),
-    ));
-    List colors = generator.colors.toList();
-    print("Color bu la $colors");
-    return colors[0] as Color?;
-  }
+  List<Color> colors = [Colors.red, Colors.black];
+
+  // _updatePalettes(String imageUrl) async {
+  //   final PaletteGenerator generator =
+  //       (await PaletteGenerator.fromImageProvider(
+  //     NetworkImage(imageUrl),
+  //     size: const Size(100, 100),
+  //   ));
+  //   colors[0] = generator.lightVibrantColor?.color ?? Colors.red;
+  //   colors[1] = generator.darkVibrantColor?.color ?? Colors.red;
+  //   return true;
+  // }
 
   final Stream<QuerySnapshot> _booksStream =
       FirebaseFirestore.instance.collection('books').snapshots();
@@ -42,8 +41,9 @@ class _DemoBookBuilderState extends State<DemoBookBuilder> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return SizedBox(
+    return Container(
       height: size.height / 4,
+      padding: EdgeInsets.only(left: kDefaultPadding),
       child: StreamBuilder<QuerySnapshot>(
         stream: _booksStream,
         builder:
@@ -67,27 +67,14 @@ class _DemoBookBuilderState extends State<DemoBookBuilder> {
                 final books = Books.fromJson(json);
                 return Padding(
                   padding: EdgeInsets.only(right: kDefaultPadding),
-                  child: FutureBuilder(
-                      future: _updatePalettes(books.thumbnail!),
-                      builder: (context, snapshot) {
-                        if (snapshot.hasData) {
-                          return BookList(
-                            imageUrl: books.thumbnail!,
-                            color: snapshot.data as Color?,
-                            onPress: () => Get.to(
-                              BookDetail(books: books),
-                            ),
-                          );
-                        } else {
-                          return BookList(
-                            imageUrl: books.thumbnail!,
-                            color: Colors.white,
-                            onPress: () => Get.to(
-                              BookDetail(books: books),
-                            ),
-                          );
-                        }
-                      }),
+                  child: BookList(
+                    imageUrl: books.thumbnail!,
+                    colorLight: colors[0],
+                    colorDark: colors[1],
+                    onPress: () => Get.to(
+                      BookDetail(books: books),
+                    ),
+                  ),
                 );
               }).toList(),
             ),
@@ -102,12 +89,14 @@ class _DemoBookBuilderState extends State<DemoBookBuilder> {
 
 class BookList extends StatelessWidget {
   final String imageUrl;
-  final Color? color;
+  final Color? colorLight;
+  final Color? colorDark;
   final Function()? onPress;
   const BookList({
     Key? key,
     required this.imageUrl,
-    required this.color,
+    this.colorLight,
+    this.colorDark,
     this.onPress,
   }) : super(key: key);
 
@@ -118,10 +107,10 @@ class BookList extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(kDefaultPadding),
         decoration: BoxDecoration(
-            color: color!.withOpacity(.2),
+            color: colorLight!.withOpacity(.2),
             boxShadow: [
               BoxShadow(
-                color: color!.withOpacity(.2),
+                color: colorDark!.withOpacity(.2),
                 blurRadius: 5,
               )
             ],
