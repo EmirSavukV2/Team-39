@@ -1,0 +1,43 @@
+{
+    "project": {
+        "name": "Fread",
+        "desciption": "Fast Read Book"
+    },
+    "UserGender": {
+        "man": "Erkek",
+        "women": "Kadın",
+        "other": "Belirtmek istemiyorum"
+    },
+    "auth": {
+        "welcome": {
+            "title": "Tüm hikayeler \nburada başlıyor",
+            "subtitle": "Elinizde sınırsız hikayeler. Kendinizi muhteşem dünyalara bırakın ve yolculuğunuza bugün başlayın",
+            "registerButton": "Şimdi hikayelere dalın",
+            "haveAccount": "Zaten bir hesabınız var mı?",
+            "login": "Giriş Yap"
+        },
+        "register": {
+            "title": "Hikaye devam ediyor",
+            "subtitle": "Kendi hikayeni yazmaya ne dersin?",
+            "name": "Ad",
+            "surname": "Soyad",
+            "mail": "Email",
+            "birtday": "Doğum Tarihi",
+            "password": "Şifreniz",
+            "passwordRetry": "Şifre tekrarı",
+            "registerButton": "Kaydol",
+            "haveAccount": "Zaten bir hesabınız var mı?",
+            "login": "Giriş Yap"
+        },
+        "login": {
+            "title": "Hikaye devam ediyor",
+            "subtitle": "Tekrar hoşgeldiniz. Hesabınıza erişmek için kimlik bilgilerinizi girin",
+            "email": "Email",
+            "password": "Şifreniz",
+            "login": "Giriş Yap",
+            "forgotPassword": "Şifrenizi mi unuttunuz?",
+            "restartPassword": "Şifreyi Sıfırla"
+        }
+
+    }
+}
